@@ -1,6 +1,6 @@
 import { Header } from "../../components/Header";
 import { AllServices } from "../../components/serviceComponet/AllServices";
-import { Information } from "../../components/serviceComponet/information";
+import { Information } from "../../components/serviceComponet/Information";
 
 export const Services = () => {
   return (

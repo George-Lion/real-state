@@ -6,7 +6,7 @@ export const Information = () => {
       <div className="px-4 py-5 my-5 text-center">
         <img
           className="d-block mx-auto mb-4"
-          src="/docs/5.1/assets/brand/bootstrap-logo.svg"
+          src="https://www.pngmart.com/files/7/Real-Estate-PNG-HD.png"
           alt=""
           width="72"
           height="57"
@@ -39,7 +39,7 @@ export const Information = () => {
 <div className="px-4 py-5 my-5 text-center">
   <img
     className="d-block mx-auto mb-4"
-    src="/docs/5.1/assets/brand/bootstrap-logo.svg"
+    src="https://www.pngmart.com/files/7/Real-Estate-PNG-HD.png"
     alt=""
     width="72"
     height="57"
