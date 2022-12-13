@@ -9,7 +9,7 @@ export const AllServices = () => {
           <div className="feature col">
             <div className="feature-icon bg-primary bg-gradient">
               <svg className="bi" width="1em" height="1em">
-                <use xlink:href="#collection"></use>
+                <use xlinkHref="#collection"></use>
               </svg>
             </div>
             <h2>Featured title</h2>
@@ -21,14 +21,14 @@ export const AllServices = () => {
             <a href="#" className="icon-link">
               Call to action
               <svg className="bi" width="1em" height="1em">
-                <use xlink:href="#chevron-right"></use>
+                <use xlinkHref="#chevron-right"></use>
               </svg>
             </a>
           </div>
           <div className="feature col">
             <div className="feature-icon bg-primary bg-gradient">
               <svg className="bi" width="1em" height="1em">
-                <use xlink:href="#people-circle"></use>
+                <use xlinkHref="#people-circle"></use>
               </svg>
             </div>
             <h2>Featured title</h2>
@@ -40,14 +40,14 @@ export const AllServices = () => {
             <a href="#" className="icon-link">
               Call to action
               <svg className="bi" width="1em" height="1em">
-                <use xlink:href="#chevron-right"></use>
+                <use xlinkHref="#chevron-right"></use>
               </svg>
             </a>
           </div>
           <div className="feature col">
             <div className="feature-icon bg-primary bg-gradient">
               <svg className="bi" width="1em" height="1em">
-                <use xlink:href="#toggles2"></use>
+                <use xlinkHref="#toggles2"></use>
               </svg>
             </div>
             <h2>Featured title</h2>
@@ -59,7 +59,7 @@ export const AllServices = () => {
             <a href="#" className="icon-link">
               Call to action
               <svg className="bi" width="1em" height="1em">
-                <use xlink:href="#chevron-right"></use>
+                <use xlinkHref="#chevron-right"></use>
               </svg>
             </a>
           </div>

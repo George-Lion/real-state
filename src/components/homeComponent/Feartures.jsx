@@ -9,7 +9,7 @@ export const Feartures = () => {
           <div className="col d-flex align-items-start">
             <div className="icon-square bg-light text-dark flex-shrink-0 me-3">
               <svg className="bi" width="1em" height="1em">
-                <use xlink:href="#toggles2"></use>
+                <use xlinkHref="#toggles2"></use>
               </svg>
             </div>
             <div>
@@ -27,7 +27,7 @@ export const Feartures = () => {
           <div className="col d-flex align-items-start">
             <div className="icon-square bg-light text-dark flex-shrink-0 me-3">
               <svg className="bi" width="1em" height="1em">
-                <use xlink:href="#cpu-fill"></use>
+                <use xlinkHref="#cpu-fill"></use>
               </svg>
             </div>
             <div>
@@ -45,7 +45,7 @@ export const Feartures = () => {
           <div className="col d-flex align-items-start">
             <div className="icon-square bg-light text-dark flex-shrink-0 me-3">
               <svg className="bi" width="1em" height="1em">
-                <use xlink:href="#tools"></use>
+                <use xlinkHref="#tools"></use>
               </svg>
             </div>
             <div>
