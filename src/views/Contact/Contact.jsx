@@ -8,181 +8,96 @@ export const Contact = () => {
   return (
     <>
       <Header />
-      <div>
-        <h4>¡Ahora puedes recibir infomación más rapidamente!</h4>
-        Gracias a nuestro gran número de oficinas podemos ubicar la mas cercana
-        al domicilio
+      <div className="form-background">
+        <div className="d-flex justify-content-center text-light">
+          <h4 className="mt-5">
+            <strong>¡Ahora puedes recibir infomación más rapidamente!</strong>
+          </h4>
+        </div>
+        <div className="d-flex justify-content-center text-light">
+          <h5>
+            Gracias a nuestro gran número de oficinas podemos ubicar la mas
+            cercana al domicilio
+          </h5>
+        </div>
+        <Form />
       </div>
-      <Form />
-      <div className="album py-5 bg-light">
+
+      <div className="album py-5 bg-light image-content">
         <div className="container">
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+          <div className="d-flex justify-content-center mb-4 mt-3">
+            <h2 className="text-light">
+              {" "}
+              <strong>¿Qué podemos ofrecerte?</strong>
+            </h2>
+          </div>
+          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-3">
             <div className="col">
-              <div className="card shadow-sm">
+              <div className="card shadow-sm style-box">
                 <div className="card-body">
-                  <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                  <p className="card-text ">
+                    Contamos con gran cantidad de clientes que están en búsqueda
+                    activa de inmuebles en nuestra plataforma.
                   </p>
                   <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
+                    <div className="btn-group"></div>
                   </div>
                 </div>
               </div>
             </div>
             <div className="col">
-              <div className="card shadow-sm">
+              <div className="card shadow-sm style-box">
                 <div className="card-body">
                   <p className="card-text">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
                     longer.
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>
             <div className="col">
-              <div className="card shadow-sm">
+              <div className="card shadow-sm style-box">
                 <div className="card-body">
                   <p className="card-text">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
                     longer.
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>
 
             <div className="col">
-              <div className="card shadow-sm">
+              <div className="card shadow-sm style-box">
                 <div className="card-body">
                   <p className="card-text">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
                     longer.
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>
             <div className="col">
-              <div className="card shadow-sm">
+              <div className="card shadow-sm style-box">
                 <div className="card-body">
                   <p className="card-text">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
                     longer.
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>
             <div className="col">
-              <div className="card shadow-sm">
+              <div className="card shadow-sm style-box">
                 <div className="card-body">
                   <p className="card-text">
                     This is a wider card with supporting text below as a natural
                     lead-in to additional content. This content is a little bit
                     longer.
                   </p>
-                  <div className="d-flex justify-content-between align-items-center">
-                    <div className="btn-group">
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        View
-                      </button>
-                      <button
-                        type="button"
-                        className="btn btn-sm btn-outline-secondary"
-                      >
-                        Edit
-                      </button>
-                    </div>
-                    <small className="text-muted">9 mins</small>
-                  </div>
                 </div>
               </div>
             </div>

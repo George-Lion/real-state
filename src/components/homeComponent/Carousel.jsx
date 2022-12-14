@@ -33,7 +33,7 @@ export const Carousel = () => {
         <div className="carousel-inner">
           <div className="carousel-item active">
             <img
-              src="https://www.vidyard.com/media/real-estate-video-marketing-1920x1080-1.jpg"
+              src="https://www.hollywoodreporter.com/wp-content/uploads/2022/09/Print-Issue-27-sty_realtors-Forster-Jones-Publicity-H-2022.jpg?w=1296"
               className="d-block w-100"
               alt="..."
             />

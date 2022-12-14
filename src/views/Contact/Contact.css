@@ -1,14 +1,28 @@
-.parent {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  grid-template-rows: repeat(5, 1fr);
-  grid-column-gap: 0px;
-  grid-row-gap: 0px;
-  }
-  
-  .div1 { grid-area: 2 / 2 / 3 / 3; }
-  .div2 { grid-area: 2 / 3 / 3 / 4; }
-  .div3 { grid-area: 2 / 4 / 3 / 5; }
-  .div4 { grid-area: 3 / 2 / 4 / 3; }
-  .div5 { grid-area: 3 / 3 / 4 / 4; }
-  .div6 { grid-area: 3 / 4 / 4 / 5; }
+.form-background{
+  background-image: url("https://www.economistjurist.es/wp-content/uploads/sites/2/2020/07/Madrid-noche.jpg") ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+}
+
+.image-content{
+  background-image: url("https://images.adsttc.com/media/images/629f/3517/c372/5201/650f/1c7f/large_jpg/hyde-park-house-robeson-architects_1.jpg?1654601149") ;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-size: cover;
+}
+
+.style-box{
+  border-radius: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  height: 140px;
+  transition: transform .2s;
+}
+
+.style-box:hover{
+  transform: scale(1.1);
+}
+

@@ -1,13 +1,57 @@
-.form-content{
+.padre{
   width: 100%;
   display: flex;
   justify-content: center;
-  margin: 50px auto; 
+}
+.contenido{
+  width: 70%;
+  background: rgba(255, 255, 255, 0.5); 
+  backdrop-filter: blur(8px);
+  border-radius: 20px;
+ 
+  display: flex;
+  padding: 40px;
 }
 
-.element-content{ 
-  width: 90%;
-  height: 500px;
-  border-radius: 20px;
-  background-color: red;
+.mapa{
+  width: 50%;
+}
+
+.mapaa{
+  width: 100%;
+}
+
+.divs{
+  width: 50%;
+
+  padding: 40px;
+}
+
+.direction{
+  width: 100%;
+}
+
+.piso{
+  width: 100%;
+  margin: 10px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.datos-form{
+  display: flex;
+  justify-content: center;
+}
+
+.data{
+  width: 100%;
+  margin-left: 10px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+
+
+.datos{
+  width: 100%;
 }
