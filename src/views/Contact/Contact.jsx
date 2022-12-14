@@ -14,9 +14,9 @@ export const Contact = () => {
             <strong>¡Ahora puedes recibir infomación más rapidamente!</strong>
           </h4>
         </div>
-        <div className="d-flex justify-content-center text-light">
+        <div className="d-flex justify-content-center text-light mb-2">
           <h5>
-            Gracias a nuestro gran número de oficinas podemos ubicar la mas
+            Gracias a nuestro gran número de oficinas podemos ubicar la más
             cercana al domicilio
           </h5>
         </div>
@@ -129,20 +129,6 @@ export const Contact = () => {
               featuring Sass variables and mixins, responsive grid system,
               extensive prebuilt components, and powerful JavaScript plugins.
             </p>
-            <div className="d-grid gap-2 d-md-flex justify-content-md-start">
-              <button
-                type="button"
-                className="btn btn-primary btn-lg px-4 me-md-2"
-              >
-                Primary
-              </button>
-              <button
-                type="button"
-                className="btn btn-outline-secondary btn-lg px-4"
-              >
-                Default
-              </button>
-            </div>
           </div>
         </div>
       </div>

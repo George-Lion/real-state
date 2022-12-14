@@ -15,10 +15,10 @@ export const Form = () => {
           </div>
           <div className="divs">
             <div>
-              <h3>Pide ya una valoración gratuita</h3>
+              <h3 className="text-dark">Pide ya una valoración gratuita</h3>
             </div>
             <div>
-              <h6>
+              <h6 className="text-dark">
                 Dirección completa del inmueble (para asignarle la oficina más
                 cercana)*
               </h6>
@@ -74,8 +74,8 @@ export const Form = () => {
                 />
               </div>
             </div>
-            <div>
-              <button>Enviar</button>
+            <div className="box-buttom">
+              <button className="send-buttom">Enviar</button>
             </div>
           </div>
         </div>
