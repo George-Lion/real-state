@@ -1,0 +1,54 @@
+.galery-box{
+  width: 100%;
+  margin: auto;
+}
+
+.cards-definition{
+  width: 80%;
+  margin: auto;
+  display: flex;
+  background-color: rgb(216, 216, 216);
+  margin-top: 40px;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: top ease 0.3s;
+  position: relative;
+  top: 0;
+}
+
+.cards-definition:hover{
+  top: -10px;
+}
+
+
+.image-box{
+  width: 40%;
+  height: 350px;
+ 
+}
+
+.image-view{
+  width:100%;
+  height:100%;
+  border-radius: 20px 0 0 20px;
+  
+}
+
+.home-details{
+  width:60% ;
+  padding-left: 20px;
+}
+
+.home-numbers{
+  display: flex;
+}
+
+.home-detail{
+margin-right: 40px;
+}
+
+.box-buttons{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
