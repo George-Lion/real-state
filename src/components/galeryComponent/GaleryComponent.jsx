@@ -16,7 +16,11 @@ export const GaleryComponent = () => {
             className="cards-definition"
           >
             <div className="image-box">
-              <img className="image-view" src={product.image} alt="" />
+              <img
+                className="image-view"
+                src={product.imgs[0]["value"]}
+                alt=""
+              />
             </div>
             <div className="home-details">
               <h1>{product.direction}</h1>
