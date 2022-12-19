@@ -3,9 +3,16 @@ import { useState } from "react";
 import "./HomeCarousel.css";
 import { useParams } from "react-router-dom";
 import products from "./../../data/product";
-import { FaBed, FaBath } from "react-icons/fa";
-import { FaRulerCombined } from "react-icons/fa";
+import {
+  FaBed,
+  FaBath,
+  FaInstagram,
+  FaRulerCombined,
+  FaTwitter,
+  FaFacebook,
+} from "react-icons/fa";
 import Footer from "../Footer";
+import { FlatModal } from "./FlatModal";
 
 export const HomeCarousel = () => {
   const { id } = useParams();
@@ -14,7 +21,7 @@ export const HomeCarousel = () => {
   const [wordData, setWordData] = useState(product.imgs[0]);
   const handleClick = (index) => {
     //Eliminar console.log
-    console.log(index);
+    /* console.log(index); */
     const wordSlider = product.imgs[index];
     setWordData(wordSlider);
   };
@@ -47,9 +54,9 @@ export const HomeCarousel = () => {
 
         {/* features */}
 
-        <div class="row g-5">
-          <div class="col-md-8">
-            <h3 class="pb-4 mb-4 fst-italic border-bottom">
+        <div className="row ">
+          <div className="col-md-8">
+            <h3 className="pb-4 mb-4 fst-italic border-bottom">
               {product.direction}
             </h3>
             <div className="title-home">
@@ -63,20 +70,28 @@ export const HomeCarousel = () => {
               >
                 {product.available ? "DISPONIBLE" : "VENDIDO"}
               </div>
+              <button
+                className="btn btn-success"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop"
+              >
+                Plano
+              </button>
+              <FlatModal id="staticBackdrop" />
             </div>
 
-            <article class="blog-post mt-5">
+            <article className="blog-post mt-5">
               <div className="d-flex">
-                <div className="space-details">
-                  <div className="icon-details">
+                <div className="col-12 space-details">
+                  <div className="icon-details" title="Habitaciones">
                     <FaBed />
                     <p>{product.rooms}</p>
                   </div>
-                  <div className="icon-details">
+                  <div className="icon-details" title="Baños">
                     <FaBath />
                     <p>{product.toilets}</p>
                   </div>
-                  <div className="icon-details">
+                  <div className="icon-details" title="metros">
                     <FaRulerCombined />
                     <p>{product.meters}</p>
                   </div>
@@ -87,7 +102,7 @@ export const HomeCarousel = () => {
               <hr />
               <h5>Caracteristicas del inmueble</h5>
 
-              <table class="table">
+              <table className="table">
                 <thead></thead>
                 <tbody>
                   <tr>
@@ -113,100 +128,93 @@ export const HomeCarousel = () => {
                 </tbody>
               </table>
             </article>
+
+            {/* Maps */}
+            <div className="col-12">
+              <img
+                className="maps-img col-12"
+                src="https://motor.elpais.com/wp-content/uploads/2022/01/google-maps-22.jpg"
+                alt=""
+              />
+            </div>
+
+            {/*  Mortgage */}
+
+            <div className="mortgage-section col-12 mt-5">
+              <h4>Calcula tu hipoteca</h4>
+            </div>
           </div>
 
           {/*  second column */}
 
-          <div class="col-md-4">
-            <div class="position-sticky" style={{ top: "2rem" }}>
-              <div class="p-4 mb-3 bg-light rounded">
-                <h4 class="fst-italic">Contactanos</h4>
-                <input
-                  className="contact-home"
-                  type="text"
-                  placeholder="Nombre*"
-                />
-                <input
-                  className="contact-home"
-                  type="text"
-                  placeholder="Apellido*"
-                />
-                <input
-                  className="contact-home"
-                  type="text"
-                  placeholder="Email*"
-                />
-                <input
-                  className="contact-home"
-                  type="text"
-                  placeholder="Teléfono"
-                />
-                <div>
-                  <button className="btn btn-success w-100">Enviar</button>
-                </div>
+          <div className="col-md-4">
+            <div className="position-sticky" style={{ top: "2rem" }}>
+              <div className="p-4 mb-3 bg-light rounded">
+                <h4 className="fst-italic">Contactanos</h4>
+                <form>
+                  <input
+                    className="contact-home"
+                    type="text"
+                    placeholder="Nombre*"
+                  />
+                  <input
+                    className="contact-home"
+                    type="text"
+                    placeholder="Apellido*"
+                  />
+                  <input
+                    className="contact-home"
+                    type="text"
+                    placeholder="Email*"
+                  />
+                  <input
+                    className="contact-home"
+                    type="text"
+                    placeholder="Teléfono"
+                  />
+                  <textarea
+                    className="contact-area"
+                    rows="10"
+                    cols="50"
+                    placeholder="Mensaje"
+                  ></textarea>
+                  <div>
+                    <button type="submit" className="btn btn-success w-100">
+                      Enviar
+                    </button>
+                  </div>
+                </form>
               </div>
 
-              <div class="p-4">
-                <h4 class="fst-italic">Archives</h4>
-                <ol class="list-unstyled mb-0">
-                  <li>
-                    <a href="#">March 2021</a>
-                  </li>
-                  <li>
-                    <a href="#">February 2021</a>
-                  </li>
-                  <li>
-                    <a href="#">January 2021</a>
-                  </li>
-                  <li>
-                    <a href="#">December 2020</a>
-                  </li>
-                  <li>
-                    <a href="#">November 2020</a>
-                  </li>
-                  <li>
-                    <a href="#">October 2020</a>
-                  </li>
-                  <li>
-                    <a href="#">September 2020</a>
-                  </li>
-                  <li>
-                    <a href="#">August 2020</a>
-                  </li>
-                  <li>
-                    <a href="#">July 2020</a>
-                  </li>
-                  <li>
-                    <a href="#">June 2020</a>
-                  </li>
-                  <li>
-                    <a href="#">May 2020</a>
-                  </li>
-                  <li>
-                    <a href="#">April 2020</a>
-                  </li>
-                </ol>
+              <div className="info-content">
+                <h3>INFO</h3>
               </div>
 
-              <div class="p-4">
-                <h4 class="fst-italic">Elsewhere</h4>
-                <ol class="list-unstyled">
+              <div className="p-4">
+                <h4 className="fst-italic">Elsewhere</h4>
+                <ol className="list-unstyled">
                   <li>
-                    <a href="#">GitHub</a>
+                    <a href="#">
+                      <FaInstagram />
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Twitter</a>
+                    <a href="#">
+                      <FaTwitter />
+                    </a>
                   </li>
                   <li>
-                    <a href="#">Facebook</a>
+                    <a href="#">
+                      <FaFacebook />
+                    </a>
                   </li>
                 </ol>
               </div>
             </div>
           </div>
         </div>
+        <Footer />
       </div>
-      <Footer />
     </>
   );
 };

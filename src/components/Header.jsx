@@ -34,7 +34,7 @@ export const Header = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link active" to="/galery">
-                Galery
+                Inmuebles
               </Link>
             </li>
             <li className="nav-item">
