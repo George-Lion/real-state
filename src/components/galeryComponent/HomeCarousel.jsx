@@ -5,6 +5,7 @@ import { useParams } from "react-router-dom";
 import products from "./../../data/product";
 import { FaBed, FaBath } from "react-icons/fa";
 import { FaRulerCombined } from "react-icons/fa";
+import Footer from "../Footer";
 
 export const HomeCarousel = () => {
   const { id } = useParams();
@@ -19,7 +20,7 @@ export const HomeCarousel = () => {
   };
   return (
     <>
-      <div className="view-content mt-4">
+      <div className="col-sm-12 col-md-10 col-lg-10 col-xxl-8 mx-auto p-3 mt-4">
         <div className="content-img">
           <img
             className="big-image"
@@ -29,17 +30,19 @@ export const HomeCarousel = () => {
           />
         </div>
         <div className="panel-image">
-          {product.imgs.map((data, i) => (
-            <div className="thumbnail" key={i}>
-              <img
-                className={wordData.id == i ? "clicked" : "noclicked"}
-                src={data.value}
-                onClick={() => handleClick(i)}
-                height="70"
-                width="100"
-              />
-            </div>
-          ))}
+          <div className="wrapper-trips">
+            {product.imgs.map((data, i) => (
+              <div className="image-space" key={i}>
+                <img
+                  className={wordData.id == i ? "clicked" : "noclicked"}
+                  src={data.value}
+                  onClick={() => handleClick(i)}
+                  height="70"
+                  width="100"
+                />
+              </div>
+            ))}
+          </div>
         </div>
 
         {/* features */}
@@ -203,6 +206,7 @@ export const HomeCarousel = () => {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 };

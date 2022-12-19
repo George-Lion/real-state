@@ -38,6 +38,26 @@ const products = [
         value:
           "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
       },
+      {
+        id: 7,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 8,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 9,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 10,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -88,6 +108,26 @@ const products = [
       },
       {
         id: 6,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+      {
+        id: 7,
+        value:
+          "https://media.istockphoto.com/id/1297689215/photo/front-view-of-a-large-two-story-blue-gray-house-with-wood-and-vinyl-siding.jpg?s=612x612&w=0&k=20&c=FFGcu1tLp1IRJs2iHrn9qOm9FS9uTIlffhs1uuMyJLo=",
+      },
+      {
+        id: 8,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 9,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 10,
         value:
           "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
       },
