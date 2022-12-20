@@ -1,15 +1,15 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { HomeCarousel } from "../../components/galeryComponent/HomeCarousel";
+import { GalleryRental } from "../../components/galeryComponent/GalleryRental";
 
-export const Sale = () => {
+export const Rental = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 0.4 }}
     >
-      <HomeCarousel />
+      <GalleryRental />
     </motion.div>
   );
 };

@@ -33,9 +33,40 @@ export const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <Link className="nav-link active" to="/galery">
-                Inmuebles
-              </Link>
+              <div
+                className="collapse navbar-collapse"
+                id="navbarNavDarkDropdown"
+              >
+                <ul className="navbar-nav">
+                  <li className="nav-item dropdown">
+                    <a
+                      className="nav-link dropdown-toggle"
+                      href="#"
+                      id="navbarDarkDropdownMenuLink"
+                      role="button"
+                      data-bs-toggle="dropdown"
+                      aria-expanded="false"
+                    >
+                      Inmuebles
+                    </a>
+                    <ul
+                      className="dropdown-menu dropdown-menu-dark"
+                      aria-labelledby="navbarDarkDropdownMenuLink"
+                    >
+                      <li>
+                        <Link className="nav-link active" to="/sale">
+                          Comprar
+                        </Link>
+                      </li>
+                      <li>
+                        <Link className="nav-link active" to="/rental">
+                          Alquilar
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
             </li>
             <li className="nav-item">
               <Link className="nav-link active" to="/contact">

@@ -1,13 +1,15 @@
 import React from "react";
 import { Form } from "../../components/contactComponent/Form";
-import Footer from "../../components/Footer";
-import { Header } from "../../components/Header";
 import "./Contact.css";
+import { motion } from "framer-motion";
 
 export const Contact = () => {
   return (
-    <>
-      <Header />
+    <motion.div
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+    >
       <div className="form-background">
         <div className="d-flex justify-content-center text-light">
           <h4 className="mt-5">
@@ -132,7 +134,6 @@ export const Contact = () => {
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+    </motion.div>
   );
 };

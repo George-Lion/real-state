@@ -5,13 +5,13 @@ import { FaBed, FaBath } from "react-icons/fa";
 import { BsArrowsMove } from "react-icons/bs";
 import { Link } from "react-router-dom";
 
-export const GaleryComponent = () => {
+export const GalleryRental = () => {
   return (
     <div>
       <div className="galery-box">
         {products != "" ? (
           products.map((product) =>
-            product.type == "sale" ? (
+            product.type == "rental" ? (
               <Link
                 key={product._id}
                 to={`/galery/${product._id}`}
@@ -53,6 +53,7 @@ export const GaleryComponent = () => {
             <h3 className="text-center">No hay inmuebles en esta categoria</h3>
           </div>
         )}
+
         <div className="box-buttons">
           <div className="before-button">
             <button>atras</button>

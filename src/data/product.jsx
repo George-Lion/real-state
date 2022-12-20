@@ -1,6 +1,7 @@
 const products = [
   {
     _id: "1",
+    type: "sale",
     direction: "Calle los Peruchos",
     imgs: [
       {
@@ -75,6 +76,7 @@ const products = [
   },
   {
     _id: "2",
+    type: "sale",
     direction: "Calle Paseo de los Prados",
     imgs: [
       {
@@ -144,6 +146,156 @@ const products = [
     air: true,
     heating: false,
     year: 2002,
+    available: false,
+  },
+  {
+    _id: "3",
+    type: "sale",
+    direction: "Calle Alonso de Tobar",
+    imgs: [
+      {
+        id: 0,
+        value:
+          "https://images.squarespace-cdn.com/content/v1/5c05b7b24611a0f67db49307/1630037496584-A9NIG4GQ0AN1WW4E8CS5/AK-11965-16-7-03_mx.jpg",
+      },
+      {
+        id: 1,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48ed/b357/658e/fb00/0441/large_jpg/AM1506.jpg?1583892706",
+      },
+      {
+        id: 2,
+        value:
+          "https://images.adsttc.com/media/images/5e68/490d/b357/658e/fb00/0442/newsletter/AM1536.jpg?1583892738",
+      },
+      {
+        id: 3,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 4,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 5,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 6,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+      {
+        id: 7,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 8,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 9,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 10,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+    ],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    price: 305.089,
+    flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
+    rooms: 3,
+    toilets: 2,
+    garage: true,
+    meters: 100,
+    floor: 3,
+    air: true,
+    heating: false,
+    year: 2011,
+    available: false,
+  },
+  {
+    _id: "4",
+    type: "rental",
+    direction: "Calle Martinita Dolores",
+    imgs: [
+      {
+        id: 0,
+        value:
+          "https://media.npr.org/assets/img/2022/12/05/ap22338046792221-e76eaa7f1532d203f1642ff4397a5c6c48cc6675.jpg",
+      },
+      {
+        id: 1,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48ed/b357/658e/fb00/0441/large_jpg/AM1506.jpg?1583892706",
+      },
+      {
+        id: 2,
+        value:
+          "https://images.adsttc.com/media/images/5e68/490d/b357/658e/fb00/0442/newsletter/AM1536.jpg?1583892738",
+      },
+      {
+        id: 3,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 4,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 5,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 6,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+      {
+        id: 7,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 8,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 9,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 10,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+    ],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    price: 700,
+    flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
+    rooms: 3,
+    toilets: 2,
+    garage: true,
+    meters: 100,
+    floor: 3,
+    air: true,
+    heating: false,
+    year: 2011,
     available: false,
   },
 ];

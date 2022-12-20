@@ -2,7 +2,7 @@ import React from "react";
 import { motion } from "framer-motion";
 import { HomeCarousel } from "../../components/galeryComponent/HomeCarousel";
 
-export const Sale = () => {
+export const RentalId = () => {
   return (
     <motion.div
       initial={{ opacity: 0 }}

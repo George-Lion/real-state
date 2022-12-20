@@ -11,7 +11,6 @@ import {
   FaTwitter,
   FaFacebook,
 } from "react-icons/fa";
-import Footer from "../Footer";
 import { FlatModal } from "./FlatModal";
 
 export const HomeCarousel = () => {
@@ -36,6 +35,7 @@ export const HomeCarousel = () => {
             width="500"
           />
         </div>
+
         <div className="panel-image">
           <div className="wrapper-trips">
             {product.imgs.map((data, i) => (
@@ -43,7 +43,9 @@ export const HomeCarousel = () => {
                 <img
                   className={wordData.id == i ? "clicked" : "noclicked"}
                   src={data.value}
-                  onClick={() => handleClick(i)}
+                  onClick={() => {
+                    handleClick(i);
+                  }}
                   height="70"
                   width="100"
                 />
@@ -63,20 +65,27 @@ export const HomeCarousel = () => {
               <div className="price-box">
                 <p>{product.price}€</p>
               </div>
-              <div
-                className={
-                  product.available ? "btn btn-success" : "btn btn-danger"
-                }
-              >
-                {product.available ? "DISPONIBLE" : "VENDIDO"}
-              </div>
-              <button
-                className="btn btn-success"
-                data-bs-toggle="modal"
-                data-bs-target="#staticBackdrop"
-              >
-                Plano
-              </button>
+
+              {product.type !== "rental" ? (
+                <>
+                  <div
+                    className={
+                      product.available ? "btn btn-success" : "btn btn-danger"
+                    }
+                  >
+                    {product.available ? "DISPONIBLE" : "VENDIDO"}
+                  </div>
+                  <button
+                    className="btn btn-success"
+                    data-bs-toggle="modal"
+                    data-bs-target="#staticBackdrop"
+                  >
+                    Plano
+                  </button>
+                </>
+              ) : (
+                ""
+              )}
               <FlatModal id="staticBackdrop" />
             </div>
 
@@ -213,7 +222,6 @@ export const HomeCarousel = () => {
             </div>
           </div>
         </div>
-        <Footer />
       </div>
     </>
   );

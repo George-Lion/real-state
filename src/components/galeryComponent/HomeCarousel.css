@@ -179,6 +179,8 @@ display: flex;
   background-color: rgb(60, 139, 192);
 }
 
+
+
 @media (max-width: 900px) {
   .content-img{
     height: 400px;

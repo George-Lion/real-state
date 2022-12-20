@@ -1,14 +1,16 @@
 import React from "react";
-import Footer from "../../components/Footer";
 import { GaleryComponent } from "../../components/galeryComponent/GaleryComponent";
-import { Header } from "../../components/Header";
+import { motion } from "framer-motion";
 
 export const Galery = () => {
   return (
-    <>
-      <Header />
+    <motion.div
+      className=""
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.4 }}
+    >
       <GaleryComponent />
-      <Footer />
-    </>
+    </motion.div>
   );
 };
