@@ -33,10 +33,7 @@ export const Header = () => {
               </Link>
             </li>
             <li className="nav-item">
-              <div
-                className="collapse navbar-collapse"
-                id="navbarNavDarkDropdown"
-              >
+              <div id="navbarNavDarkDropdown">
                 <ul className="navbar-nav">
                   <li className="nav-item dropdown">
                     <a
