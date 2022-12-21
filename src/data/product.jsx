@@ -59,6 +59,36 @@ const products = [
         value:
           "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
       },
+      {
+        id: 11,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 12,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+      {
+        id: 13,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 14,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 15,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 16,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
@@ -82,27 +112,27 @@ const products = [
       {
         id: 0,
         value:
-          "https://static01.nyt.com/images/2019/06/25/realestate/25domestic-zeff/a1c1a1a36c9e4ff8adcb958c4276f28d-jumbo.jpg",
+          "https://images.pexels.com/photos/106399/pexels-photo-106399.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 1,
         value:
-          "https://thumbor.forbes.com/thumbor/fit-in/900x510/https://www.forbes.com/advisor/wp-content/uploads/2022/03/houses_expensive.jpg",
+          "https://images.pexels.com/photos/6422929/pexels-photo-6422929.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 2,
         value:
-          "https://media.istockphoto.com/id/1211174464/photo/beautiful-residential-home-exterior-on-bright-sunny-day-with-green-grass-and-blue-sky.jpg?s=612x612&w=0&k=20&c=h0XtWGD8asz_hfDVus7SWwOrtAFlZYfr7wdStKCQv14=",
+          "https://images.pexels.com/photos/186077/pexels-photo-186077.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 3,
         value:
-          "https://media.istockphoto.com/id/1297689215/photo/front-view-of-a-large-two-story-blue-gray-house-with-wood-and-vinyl-siding.jpg?s=612x612&w=0&k=20&c=FFGcu1tLp1IRJs2iHrn9qOm9FS9uTIlffhs1uuMyJLo=",
+          "https://images.pexels.com/photos/2157404/pexels-photo-2157404.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 4,
         value:
-          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+          "https://images.pexels.com/photos/111963/pexels-photo-111963.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 5,
@@ -138,6 +168,7 @@ const products = [
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
     price: 250.999,
+    flat: "https://cyrarquitectura.com/wp-content/uploads/2019/02/P01-Planos-A3_003.jpg",
     rooms: 4,
     toilets: 2,
     garage: true,
@@ -146,7 +177,7 @@ const products = [
     air: true,
     heating: false,
     year: 2002,
-    available: false,
+    available: true,
   },
   {
     _id: "3",
@@ -247,6 +278,156 @@ const products = [
         id: 3,
         value:
           "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 4,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 5,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 6,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+      {
+        id: 7,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 8,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 9,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 10,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+    ],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    price: 700,
+    flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
+    rooms: 3,
+    toilets: 2,
+    garage: true,
+    meters: 100,
+    floor: 3,
+    air: true,
+    heating: false,
+    year: 2011,
+    available: false,
+  },
+  {
+    _id: "5",
+    type: "rental",
+    direction: "Calle Martinita Dolores",
+    imgs: [
+      {
+        id: 0,
+        value:
+          "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 1,
+        value:
+          "https://images.pexels.com/photos/2029673/pexels-photo-2029673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 2,
+        value:
+          "https://images.pexels.com/photos/1910472/pexels-photo-1910472.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 3,
+        value:
+          "https://images.pexels.com/photos/1080721/pexels-photo-1080721.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 4,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 5,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 6,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+      {
+        id: 7,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 8,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 9,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 10,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+    ],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    price: 700,
+    flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
+    rooms: 3,
+    toilets: 2,
+    garage: true,
+    meters: 100,
+    floor: 3,
+    air: true,
+    heating: false,
+    year: 2011,
+    available: false,
+  },
+  {
+    _id: "6",
+    type: "rental",
+    direction: "Calle Martinita Dolores",
+    imgs: [
+      {
+        id: 0,
+        value:
+          "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 1,
+        value:
+          "https://images.pexels.com/photos/1457841/pexels-photo-1457841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 2,
+        value:
+          "https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 3,
+        value:
+          "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 4,

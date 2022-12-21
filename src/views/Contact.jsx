@@ -1,5 +1,5 @@
 import React from "react";
-import { Form } from "../../components/contactComponent/Form";
+import { Form } from "../components/contactComponent/Form";
 import "./Contact.css";
 import { motion } from "framer-motion";
 
