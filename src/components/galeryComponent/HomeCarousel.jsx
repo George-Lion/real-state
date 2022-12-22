@@ -11,6 +11,7 @@ import {
   FaTwitter,
   FaFacebook,
 } from "react-icons/fa";
+import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import { FlatModal } from "./FlatModal";
 import { ViewerComponent } from "./ViewerComponent";
 
@@ -29,8 +30,37 @@ export const HomeCarousel = () => {
   const handleClick = (index) => {
     //Eliminar console.log
     /* console.log(index); */
-    const wordSlider = product.imgs[index];
-    setWordData(wordSlider);
+    const imagenActual = index;
+    setImagenActual(imagenActual);
+  };
+  const [count, setCount] = useState(1);
+  /* NEW */
+  const [imagenActual, setImagenActual] = useState(0);
+  const cantidad = product.imgs.length;
+
+  if (Array.isArray(product) || cantidad === 0) return;
+  const siguienteImagen = () => {
+    setImagenActual(imagenActual === cantidad - 1 ? 0 : imagenActual + 1);
+    setCount(count === product.imgs.length ? 1 : count + 1);
+  };
+
+  const anteriorImagen = () => {
+    setImagenActual(imagenActual === 0 ? cantidad - 1 : imagenActual - 1);
+    setCount(count === 1 ? product.imgs.length : count - 1);
+  };
+
+  const anteriorImagenTecla = (e) => {
+    if (e.keyCode === 37) {
+      setImagenActual(imagenActual === 0 ? cantidad - 1 : imagenActual - 1);
+      setCount(count === 1 ? product.imgs.length : count - 1);
+    }
+  };
+
+  const siguienteImagenTecla = (e) => {
+    if (e.keyCode === 39) {
+      setImagenActual(imagenActual === cantidad - 1 ? 0 : imagenActual + 1);
+      setCount(count === product.imgs.length ? 1 : count + 1);
+    }
   };
   return (
     <>
@@ -43,27 +73,50 @@ export const HomeCarousel = () => {
         />
       ) : (
         <div className="col-sm-12 col-md-10 col-lg-10 col-xxl-8 mx-auto p-3 mt-4">
-          <div className="content-img">
-            <img
-              className="big-image"
-              src={wordData.value}
-              height="300"
-              width="500"
-              onClick={() => {
-                verPhoto();
-              }}
-            />
+          <div className="carrucel">
+            <button
+              className=" buttons-arrow"
+              onClick={anteriorImagen}
+              onKeyDown={anteriorImagenTecla}
+              title="Anterior"
+            >
+              <AiFillCaretLeft fontSize={"2rem"} color={"black"} />
+            </button>
+            <div className="content-img">
+              {product.imgs.map((data, index) => {
+                return (
+                  <div key={index}>
+                    {imagenActual === index && (
+                      <img className="big-image" src={data.value} />
+                    )}
+                  </div>
+                );
+              })}
+              <div className="count-style">
+                <div className="count-numbers">
+                  <p>{count}</p>
+                  <p>/ {product.imgs.length}</p>
+                </div>
+              </div>
+            </div>
+            <button
+              className="buttons-arrow"
+              onClick={siguienteImagen}
+              onKeyDown={siguienteImagenTecla}
+              title="Siguiente"
+            >
+              <AiFillCaretRight fontSize={"2rem"} color={"black"} />
+            </button>
           </div>
-
           <div className="panel-image">
             <div className="wrapper-trips">
-              {product.imgs.map((data, i) => (
-                <div className="image-space" key={i}>
+              {product.imgs.map((data, index) => (
+                <div className="image-space" key={index}>
                   <img
-                    className={wordData.id == i ? "clicked" : "noclicked"}
+                    className={imagenActual === index ? "clicked" : "noclicked"}
                     src={data.value}
                     onClick={() => {
-                      handleClick(i);
+                      handleClick(index);
                     }}
                     height="70"
                     width="100"

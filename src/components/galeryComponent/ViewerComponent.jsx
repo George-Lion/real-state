@@ -1,10 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import "./ViewerComponent.css";
 import { useParams } from "react-router-dom";
 import products from "./../../data/product";
-import { AiOutlineCloseCircle } from "react-icons/ai";
+import {
+  AiOutlineCloseCircle,
+  AiFillCaretLeft,
+  AiFillCaretRight,
+} from "react-icons/ai";
 
 export const ViewerComponent = ({
+  data,
   viewer,
   setViewer,
   wordData,
@@ -13,17 +18,28 @@ export const ViewerComponent = ({
   const { id } = useParams();
   const product = products.find((p) => p._id === id);
 
-  const handleClick = (index) => {
-    //Eliminar console.log
-    /* console.log(index); */
-    const wordSlider = product.imgs[index];
-    setWordData(wordSlider);
+  const [imagenActual, setImagenActual] = useState(0);
+  const cantidad = product.imgs.length;
+
+  if (Array.isArray(product) || cantidad === 0) return;
+  const siguienteImagen = () => {
+    setImagenActual(imagenActual === cantidad - 1 ? 0 : imagenActual + 1);
   };
 
-  const next = (index) => {
+  const anteriorImagen = () => {
+    setImagenActual(imagenActual === 0 ? cantidad - 1 : imagenActual - 1);
+  };
+
+  /*   const handleClick = (index) => {
+    
+    const wordSlider = product.imgs[index];
+    setWordData(wordSlider);
+  }; */
+
+  /*   const next = (index) => {
     const wordSlider = product.imgs[index];
     setWordData(wordSlider + 1);
-  };
+  }; */
   return (
     <div>
       <div className="viewer-content">
@@ -38,26 +54,44 @@ export const ViewerComponent = ({
             <AiOutlineCloseCircle />
           </button>
         </div>
-
-        <div className="fotoss">
-          <img
-            className="big-image"
-            src={wordData.value}
-            height="300"
-            width="500"
-          />
+        <div className="all-box">
+          <button
+            className="buttons-arrow"
+            onClick={anteriorImagen}
+            title="Anterior"
+          >
+            <AiFillCaretLeft fontSize={"2rem"} color={"white"} />
+          </button>
+          <div className="fotoss">
+            {product.imgs.map((data, index) => {
+              return (
+                <div key={index}>
+                  {imagenActual === index && (
+                    <img className="display-image" src={data.value} />
+                  )}
+                </div>
+              );
+            })}
+          </div>
+          <button
+            className="buttons-arrow"
+            onClick={siguienteImagen}
+            title="Siguiente"
+          >
+            <AiFillCaretRight fontSize={"2rem"} color={"white"} />
+          </button>
         </div>
         <div>
-          <button
+          {/*     <button
             onClick={() => {
               next();
             }}
           >
             NEXT
-          </button>
+          </button> */}
         </div>
         <div>
-          <div className="wrapper-max ">
+          {/* <div className="wrapper-max ">
             {product.imgs.map((data, i) => (
               <div className="image-space " key={i}>
                 <img
@@ -71,7 +105,7 @@ export const ViewerComponent = ({
                 />
               </div>
             ))}
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
