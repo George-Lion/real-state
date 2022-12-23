@@ -27,7 +27,7 @@ padding-right: 15px;
 .count-numbers{
   width: 70px;
   display: flex;
-  background-color: rgba(0,0,0,0.5);
+  background-color: rgba(0,0,0,0.6);
   border-radius: 15px;
   padding: 8px;
   justify-content: center;

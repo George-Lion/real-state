@@ -82,7 +82,12 @@ export const HomeCarousel = () => {
   return (
     <>
       {viewer == true ? (
-        <ViewerComponent viewer={viewer} setViewer={setViewer} />
+        <ViewerComponent
+          viewer={viewer}
+          setViewer={setViewer}
+          currentImage={currentImage}
+          setCurrentImage={setCurrentImage}
+        />
       ) : (
         <div className="col-sm-12 col-md-10 col-lg-10 col-xxl-8 mx-auto p-3 mt-4">
           {/* CARRUSEL DE IMAGENES */}
@@ -100,11 +105,11 @@ export const HomeCarousel = () => {
             {/* CONTENEDOR DE IMAGENES BOOSTRAP*/}
             <div
               id="carouselExampleControls"
-              class="carousel slide col-12"
+              className="carousel slide col-12"
               data-bs-ride="carousel"
             >
-              <div class="carousel-inner ">
-                <div class="carousel-item active">
+              <div className="carousel-inner ">
+                <div className="carousel-item active">
                   {product.imgs.map((data, index) => {
                     return (
                       <div
@@ -116,38 +121,51 @@ export const HomeCarousel = () => {
                         }
                       >
                         {currentImage === index && (
-                          <img className="current-image" src={data.value} />
+                          <img
+                            className="current-image"
+                            src={data.value}
+                            onClick={() => {
+                              verPhoto();
+                            }}
+                          />
                         )}
                       </div>
                     );
                   })}
                 </div>
               </div>
+
+              <div className="count-style">
+                <div className="count-numbers">
+                  <p>{count}</p>
+                  <p>/ {product.imgs.length}</p>
+                </div>
+              </div>
               <button
-                class="carousel-control-prev"
+                className="carousel-control-prev"
                 type="button"
                 onClick={previousImage}
                 data-bs-target="#carouselExampleControls"
                 data-bs-slide="prev"
               >
                 <span
-                  class="carousel-control-prev-icon"
+                  className="carousel-control-prev-icon"
                   aria-hidden="true"
                 ></span>
-                <span class="visually-hidden">Previous</span>
+                <span className="visually-hidden">Previous</span>
               </button>
               <button
-                class="carousel-control-next"
+                className="carousel-control-next"
                 type="button"
                 onClick={nextImage}
                 data-bs-target="#carouselExampleControls"
                 data-bs-slide="next"
               >
                 <span
-                  class="carousel-control-next-icon"
+                  className="carousel-control-next-icon"
                   aria-hidden="true"
                 ></span>
-                <span class="visually-hidden">Next</span>
+                <span className="visually-hidden">Next</span>
               </button>
             </div>
 
@@ -272,26 +290,26 @@ export const HomeCarousel = () => {
                     <tr>
                       <td>Planta</td>
                       <td></td>
-                      <td style={{ "text-align": "right" }}>{product.floor}</td>
+                      <td style={{ textAlign: "right" }}>{product.floor}</td>
                     </tr>
                     <tr>
                       <td>Aire acondicionado</td>
                       <td></td>
-                      <td className="" style={{ "text-align": "right" }}>
+                      <td className="" style={{ textAlign: "right" }}>
                         {product.air ? "si" : "no"}
                       </td>
                     </tr>
                     <tr>
                       <td>Calefacción</td>
                       <td></td>
-                      <td style={{ "text-align": "right" }}>
+                      <td style={{ textAlign: "right" }}>
                         {product.heating ? "si" : "no"}
                       </td>
                     </tr>
                     <tr>
                       <td>Año de construcción</td>
                       <td></td>
-                      <td style={{ "text-align": "right" }}>{product.year}</td>
+                      <td style={{ textAlign: "right" }}>{product.year}</td>
                     </tr>
                   </tbody>
                 </table>

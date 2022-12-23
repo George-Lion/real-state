@@ -12,22 +12,21 @@ export const ViewerComponent = ({
   data,
   viewer,
   setViewer,
-  wordData,
-  setWordData,
+  currentImage,
+  setCurrentImage,
 }) => {
   const { id } = useParams();
   const product = products.find((p) => p._id === id);
 
-  const [imagenActual, setImagenActual] = useState(0);
-  const cantidad = product.imgs.length;
+  const imageLength = product.imgs.length;
 
-  if (Array.isArray(product) || cantidad === 0) return;
-  const siguienteImagen = () => {
-    setImagenActual(imagenActual === cantidad - 1 ? 0 : imagenActual + 1);
+  /* if (Array.isArray(product) || cantidad === 0) return; */
+  const nextImage = () => {
+    setCurrentImage(currentImage === imageLength - 1 ? 0 : currentImage + 1);
   };
 
-  const anteriorImagen = () => {
-    setImagenActual(imagenActual === 0 ? cantidad - 1 : imagenActual - 1);
+  const previousImage = () => {
+    setCurrentImage(currentImage === 0 ? imageLength - 1 : currentImage - 1);
   };
 
   /*   const handleClick = (index) => {
@@ -54,33 +53,66 @@ export const ViewerComponent = ({
             <AiOutlineCloseCircle />
           </button>
         </div>
-        <div className="all-box">
-          <button
-            className="buttons-arrow"
-            onClick={anteriorImagen}
-            title="Anterior"
-          >
-            <AiFillCaretLeft fontSize={"2rem"} color={"white"} />
-          </button>
-          <div className="fotoss">
-            {product.imgs.map((data, index) => {
-              return (
-                <div key={index}>
-                  {imagenActual === index && (
-                    <img className="display-image" src={data.value} />
-                  )}
-                </div>
-              );
-            })}
+        <div
+          id="carouselExampleControls"
+          className="carousel slide col-12 mt-5"
+          data-bs-ride="carousel"
+        >
+          <div className="carousel-inner ">
+            <div className="carousel-item active">
+              {product.imgs.map((data, index) => {
+                return (
+                  <div
+                    key={index}
+                    className={
+                      currentImage === index
+                        ? `${"photo"} ${"active"}`
+                        : "photo"
+                    }
+                  >
+                    {currentImage === index && (
+                      <img
+                        className="current-image"
+                        src={data.value}
+                        onClick={() => {
+                          verPhoto();
+                        }}
+                      />
+                    )}
+                  </div>
+                );
+              })}
+            </div>
           </div>
+
           <button
-            className="buttons-arrow"
-            onClick={siguienteImagen}
-            title="Siguiente"
+            className="carousel-control-prev"
+            type="button"
+            onClick={previousImage}
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="prev"
           >
-            <AiFillCaretRight fontSize={"2rem"} color={"white"} />
+            <span
+              className="carousel-control-prev-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Previous</span>
+          </button>
+          <button
+            className="carousel-control-next"
+            type="button"
+            onClick={nextImage}
+            data-bs-target="#carouselExampleControls"
+            data-bs-slide="next"
+          >
+            <span
+              className="carousel-control-next-icon"
+              aria-hidden="true"
+            ></span>
+            <span className="visually-hidden">Next</span>
           </button>
         </div>
+
         <div>
           {/*     <button
             onClick={() => {
