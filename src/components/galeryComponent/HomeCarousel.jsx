@@ -1,5 +1,5 @@
 import React from "react";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./HomeCarousel.css";
 import { useParams } from "react-router-dom";
 import products from "./../../data/product";
@@ -26,68 +26,146 @@ export const HomeCarousel = () => {
     setViewer(true);
   };
 
-  const [wordData, setWordData] = useState(product.imgs[0]);
-  const handleClick = (index) => {
-    //Eliminar console.log
-    /* console.log(index); */
-    const imagenActual = index;
-    setImagenActual(imagenActual);
-  };
   const [count, setCount] = useState(1);
-  /* NEW */
-  const [imagenActual, setImagenActual] = useState(0);
-  const cantidad = product.imgs.length;
 
-  if (Array.isArray(product) || cantidad === 0) return;
-  const siguienteImagen = () => {
-    setImagenActual(imagenActual === cantidad - 1 ? 0 : imagenActual + 1);
+  const [currentImage, setCurrentImage] = useState(0);
+  const imageLength = product.imgs.length;
+
+  const handleClick = (index) => {
+    const currentImage = index;
+    setCurrentImage(currentImage);
+    setCount(index + 1);
+  };
+
+  if (Array.isArray(product) || imageLength === 0) return;
+
+  /* FUNCIONES PARA DETECTAR EL CLICK EN LOS BOTONES */
+
+  const nextImage = () => {
+    setCurrentImage(currentImage === imageLength - 1 ? 0 : currentImage + 1);
     setCount(count === product.imgs.length ? 1 : count + 1);
   };
 
-  const anteriorImagen = () => {
-    setImagenActual(imagenActual === 0 ? cantidad - 1 : imagenActual - 1);
+  const previousImage = () => {
+    setCurrentImage(currentImage === 0 ? imageLength - 1 : currentImage - 1);
     setCount(count === 1 ? product.imgs.length : count - 1);
   };
 
-  const anteriorImagenTecla = (e) => {
-    if (e.keyCode === 37) {
-      setImagenActual(imagenActual === 0 ? cantidad - 1 : imagenActual - 1);
-      setCount(count === 1 ? product.imgs.length : count - 1);
-    }
-  };
+  /* FUNCIONES PARA DETECTAR LA EJECUCIÓN DE TECLAS FLECHA EN LA VENTANA */
 
-  const siguienteImagenTecla = (e) => {
-    if (e.keyCode === 39) {
-      setImagenActual(imagenActual === cantidad - 1 ? 0 : imagenActual + 1);
-      setCount(count === product.imgs.length ? 1 : count + 1);
-    }
-  };
+  useEffect(() => {
+    const detectKeyDown = (e) => {
+      if (e.keyCode === 39) {
+        setCurrentImage(
+          currentImage === imageLength - 1 ? 0 : currentImage + 1
+        );
+        setCount(count === product.imgs.length ? 1 : count + 1);
+      }
+    };
+    document.addEventListener("keydown", detectKeyDown);
+    return () => document.removeEventListener("keydown", detectKeyDown);
+  });
+
+  useEffect(() => {
+    const detectKeyDown = (e) => {
+      if (e.keyCode === 37) {
+        setCurrentImage(
+          currentImage === 0 ? imageLength - 1 : currentImage - 1
+        );
+        setCount(count === 1 ? product.imgs.length : count - 1);
+      }
+    };
+    document.addEventListener("keydown", detectKeyDown);
+    return () => document.removeEventListener("keydown", detectKeyDown);
+  });
+
   return (
     <>
       {viewer == true ? (
-        <ViewerComponent
-          viewer={viewer}
-          setViewer={setViewer}
-          wordData={wordData}
-          setWordData={setWordData}
-        />
+        <ViewerComponent viewer={viewer} setViewer={setViewer} />
       ) : (
         <div className="col-sm-12 col-md-10 col-lg-10 col-xxl-8 mx-auto p-3 mt-4">
+          {/* CARRUSEL DE IMAGENES */}
+          {/* BOTON ANTERIOR*/}
+
           <div className="carrucel">
-            <button
+            {/*  <button
               className=" buttons-arrow"
-              onClick={anteriorImagen}
-              onKeyDown={anteriorImagenTecla}
+              onClick={previousImage}
               title="Anterior"
             >
               <AiFillCaretLeft fontSize={"2rem"} color={"black"} />
-            </button>
-            <div className="content-img">
+            </button> */}
+
+            {/* CONTENEDOR DE IMAGENES BOOSTRAP*/}
+            <div
+              id="carouselExampleControls"
+              class="carousel slide col-12"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner ">
+                <div class="carousel-item active">
+                  {product.imgs.map((data, index) => {
+                    return (
+                      <div
+                        key={index}
+                        className={
+                          currentImage === index
+                            ? `${"photo"} ${"active"}`
+                            : "photo"
+                        }
+                      >
+                        {currentImage === index && (
+                          <img className="current-image" src={data.value} />
+                        )}
+                      </div>
+                    );
+                  })}
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                onClick={previousImage}
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                onClick={nextImage}
+                data-bs-target="#carouselExampleControls"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+
+            {/* CONTENEDOR DE IMAGENES PURO CODIGO*/}
+
+            {/*  <div className="content-img">
               {product.imgs.map((data, index) => {
                 return (
-                  <div key={index}>
-                    {imagenActual === index && (
-                      <img className="big-image" src={data.value} />
+                  <div
+                    key={index}
+                    className={
+                      currentImage === index
+                        ? `${"photo"} ${"active"}`
+                        : "photo"
+                    }
+                  >
+                    {currentImage === index && (
+                      <img className="current-image" src={data.value} />
                     )}
                   </div>
                 );
@@ -98,22 +176,27 @@ export const HomeCarousel = () => {
                   <p>/ {product.imgs.length}</p>
                 </div>
               </div>
-            </div>
-            <button
+            </div> */}
+
+            {/* BOTON SIGUIENTE */}
+
+            {/*    <button
               className="buttons-arrow"
-              onClick={siguienteImagen}
-              onKeyDown={siguienteImagenTecla}
+              onClick={nextImage}
               title="Siguiente"
             >
               <AiFillCaretRight fontSize={"2rem"} color={"black"} />
-            </button>
+            </button> */}
           </div>
+
+          {/* PANEL SELECTOR DE IMAGEN */}
+
           <div className="panel-image">
             <div className="wrapper-trips">
               {product.imgs.map((data, index) => (
                 <div className="image-space" key={index}>
                   <img
-                    className={imagenActual === index ? "clicked" : "noclicked"}
+                    className={currentImage === index ? "clicked" : "noclicked"}
                     src={data.value}
                     onClick={() => {
                       handleClick(index);
@@ -126,7 +209,7 @@ export const HomeCarousel = () => {
             </div>
           </div>
 
-          {/* features */}
+          {/* DETALLES DEL INMUEBLE */}
 
           <div className="row ">
             <div className="col-md-8">
@@ -135,7 +218,7 @@ export const HomeCarousel = () => {
               </h3>
               <div className="title-home">
                 <div className="price-box">
-                  <p>{product.price}€</p>
+                  <h4>{product.price}€</h4>
                 </div>
 
                 {product.type !== "rental" ? (
@@ -165,21 +248,21 @@ export const HomeCarousel = () => {
                 <div className="d-flex">
                   <div className="col-12 space-details">
                     <div className="icon-details" title="Habitaciones">
-                      <FaBed />
+                      <FaBed className="me-2" />
                       <p>{product.rooms}</p>
                     </div>
                     <div className="icon-details" title="Baños">
-                      <FaBath />
+                      <FaBath className="me-2" />
                       <p>{product.toilets}</p>
                     </div>
                     <div className="icon-details" title="metros">
-                      <FaRulerCombined />
+                      <FaRulerCombined className="me-2" />
                       <p>{product.meters}</p>
                     </div>
                   </div>
                 </div>
 
-                <p>{product.description}</p>
+                <p className="description-paragraph">{product.description}</p>
                 <hr />
                 <h5>Caracteristicas del inmueble</h5>
 
@@ -189,22 +272,26 @@ export const HomeCarousel = () => {
                     <tr>
                       <td>Planta</td>
                       <td></td>
-                      <td>{product.floor}</td>
+                      <td style={{ "text-align": "right" }}>{product.floor}</td>
                     </tr>
                     <tr>
                       <td>Aire acondicionado</td>
                       <td></td>
-                      <td>{product.air ? "si" : "no"}</td>
+                      <td className="" style={{ "text-align": "right" }}>
+                        {product.air ? "si" : "no"}
+                      </td>
                     </tr>
                     <tr>
                       <td>Calefacción</td>
                       <td></td>
-                      <td>{product.heating ? "si" : "no"}</td>
+                      <td style={{ "text-align": "right" }}>
+                        {product.heating ? "si" : "no"}
+                      </td>
                     </tr>
                     <tr>
                       <td>Año de construcción</td>
                       <td></td>
-                      <td>{product.year}</td>
+                      <td style={{ "text-align": "right" }}>{product.year}</td>
                     </tr>
                   </tbody>
                 </table>

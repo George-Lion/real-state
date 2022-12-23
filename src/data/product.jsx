@@ -2,12 +2,12 @@ const products = [
   {
     _id: "1",
     type: "sale",
-    direction: "Calle los Peruchos",
+    direction: "Calle del Alcalde Manuel Gómez",
     imgs: [
       {
         id: 0,
         value:
-          "https://images.adsttc.com/media/images/629f/3517/c372/5201/650f/1c7f/large_jpg/hyde-park-house-robeson-architects_1.jpg?1654601149",
+          "https://images.pexels.com/photos/1732414/pexels-photo-1732414.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 1,
@@ -17,17 +17,17 @@ const products = [
       {
         id: 2,
         value:
-          "https://images.adsttc.com/media/images/5e68/490d/b357/658e/fb00/0442/newsletter/AM1536.jpg?1583892738",
+          "https://images.pexels.com/photos/7028069/pexels-photo-7028069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 3,
         value:
-          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+          "https://images.pexels.com/photos/2507016/pexels-photo-2507016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 4,
         value:
-          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+          "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 5,
@@ -42,7 +42,7 @@ const products = [
       {
         id: 7,
         value:
-          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+          "https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 8,
@@ -82,16 +82,16 @@ const products = [
       {
         id: 15,
         value:
-          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+          "https://images.pexels.com/photos/6642522/pexels-photo-6642522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 16,
         value:
-          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+          "https://images.pexels.com/photos/6642517/pexels-photo-6642517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
     ],
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      "Fantástico inmueble de 100 metros, en 3º planta. Cuenta con un amplio y luminoso salón con terraza incorporada, 3 dormitorios ( antes 4), cocina equipada y baño. Persianas motorizadas. Ventanas de climalit oscilobatientes. Suelo de parquet, acuchillado recientemente. Aire acondicionado. Excelente ubicación sobre avenida principal. Rodeado de todo tipo de servicios y transporte publico. Zonas verdes y recreativas. Llámenos y con mucho gusto coordinaremos su visita.",
     price: 305.089,
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
