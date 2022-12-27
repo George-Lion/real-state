@@ -4,10 +4,12 @@ import products from "./../../data/product";
 import { FaBed, FaBath } from "react-icons/fa";
 import { BsArrowsMove } from "react-icons/bs";
 import { Link } from "react-router-dom";
+import { SearchComponent } from "../searchComponents/SearchComponent";
 
 export const GalleryRental = () => {
   return (
     <div>
+      <SearchComponent />
       <div className="galery-box">
         {products != "" ? (
           products.map((product) =>

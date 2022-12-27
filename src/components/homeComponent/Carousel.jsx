@@ -4,14 +4,14 @@ export const Carousel = () => {
   return (
     <div>
       <div
-        id="carouselExampleIndicators"
+        id="carouselExampleCaptions"
         className="carousel slide"
         data-bs-ride="carousel"
       >
         <div className="carousel-indicators">
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="0"
             className="active"
             aria-current="true"
@@ -19,44 +19,62 @@ export const Carousel = () => {
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="1"
             aria-label="Slide 2"
           ></button>
           <button
             type="button"
-            data-bs-target="#carouselExampleIndicators"
+            data-bs-target="#carouselExampleCaptions"
             data-bs-slide-to="2"
             aria-label="Slide 3"
           ></button>
         </div>
-        <div className="carousel-inner">
-          <div className="carousel-item active">
+        <div className="carousel-inner" style={{ maxHeight: "600px" }}>
+          <div className="carousel-item active" style={{ maxHeight: "600px" }}>
             <img
-              src="https://www.hollywoodreporter.com/wp-content/uploads/2022/09/Print-Issue-27-sty_realtors-Forster-Jones-Publicity-H-2022.jpg?w=1296"
+              src="https://images.pexels.com/photos/7415097/pexels-photo-7415097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               className="d-block w-100"
               alt="..."
             />
+            <div className="carousel-caption d-none d-md-block">
+              <h5>First slide label</h5>
+              <p>
+                Some representative placeholder content for the first slide.
+              </p>
+            </div>
           </div>
-          <div className="carousel-item">
+          <div className="carousel-item" style={{ maxHeight: "600px" }}>
             <img
-              src="https://deacapitalreiberia.eu/wp-content/uploads/2019/03/Madrid_Header.jpg"
+              src="https://images.pexels.com/photos/3209045/pexels-photo-3209045.jpeg?auto=compress&cs=tinysrgb&w=1600"
               className="d-block w-100"
               alt="..."
             />
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Second slide label</h5>
+              <p>
+                Some representative placeholder content for the second slide.
+              </p>
+            </div>
           </div>
-          <div className="carousel-item">
+          <div className="carousel-item" style={{ maxHeight: "600px" }}>
             <img
-              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1gJyDd2Z_UmQgD5Ky3eEbEbApjGfLbg4mOQ&usqp=CAU"
+              src="https://images.pexels.com/photos/7415097/pexels-photo-7415097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               className="d-block w-100"
               alt="..."
             />
+            <div className="carousel-caption d-none d-md-block">
+              <h5>Third slide label</h5>
+              <p>
+                Some representative placeholder content for the third slide.
+              </p>
+            </div>
           </div>
         </div>
         <button
           className="carousel-control-prev"
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleCaptions"
           data-bs-slide="prev"
         >
           <span
@@ -68,7 +86,7 @@ export const Carousel = () => {
         <button
           className="carousel-control-next"
           type="button"
-          data-bs-target="#carouselExampleIndicators"
+          data-bs-target="#carouselExampleCaptions"
           data-bs-slide="next"
         >
           <span

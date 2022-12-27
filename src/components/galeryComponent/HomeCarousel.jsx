@@ -1,8 +1,6 @@
-import React from "react";
-import { useState, useEffect } from "react";
-import "./HomeCarousel.css";
+import React, { useState, useEffect, useContext } from "react";
 import { useParams } from "react-router-dom";
-import products from "./../../data/product";
+import { HouseContext } from "./../HouseContext";
 import {
   FaBed,
   FaBath,
@@ -11,13 +9,14 @@ import {
   FaTwitter,
   FaFacebook,
 } from "react-icons/fa";
-import { AiFillCaretLeft, AiFillCaretRight } from "react-icons/ai";
 import { FlatModal } from "./FlatModal";
 import { ViewerComponent } from "./ViewerComponent";
+import "./HomeCarousel.css";
 
 export const HomeCarousel = () => {
+  const { houses } = useContext(HouseContext);
   const { id } = useParams();
-  const product = products.find((p) => p._id === id);
+  const house = houses.find((p) => p._id === id);
 
   /* EJECUTA EL VISOR DE FOTOS */
 
@@ -29,7 +28,7 @@ export const HomeCarousel = () => {
   const [count, setCount] = useState(1);
 
   const [currentImage, setCurrentImage] = useState(0);
-  const imageLength = product.imgs.length;
+  const imageLength = house.imgs.length;
 
   const handleClick = (index) => {
     const currentImage = index;
@@ -37,18 +36,18 @@ export const HomeCarousel = () => {
     setCount(index + 1);
   };
 
-  if (Array.isArray(product) || imageLength === 0) return;
+  /*  if (Array.isArray(house) || imageLength === 0) return; */
 
   /* FUNCIONES PARA DETECTAR EL CLICK EN LOS BOTONES */
 
   const nextImage = () => {
     setCurrentImage(currentImage === imageLength - 1 ? 0 : currentImage + 1);
-    setCount(count === product.imgs.length ? 1 : count + 1);
+    setCount(count === house.imgs.length ? 1 : count + 1);
   };
 
   const previousImage = () => {
     setCurrentImage(currentImage === 0 ? imageLength - 1 : currentImage - 1);
-    setCount(count === 1 ? product.imgs.length : count - 1);
+    setCount(count === 1 ? house.imgs.length : count - 1);
   };
 
   /* FUNCIONES PARA DETECTAR LA EJECUCIÓN DE TECLAS FLECHA EN LA VENTANA */
@@ -59,7 +58,7 @@ export const HomeCarousel = () => {
         setCurrentImage(
           currentImage === imageLength - 1 ? 0 : currentImage + 1
         );
-        setCount(count === product.imgs.length ? 1 : count + 1);
+        setCount(count === house.imgs.length ? 1 : count + 1);
       }
     };
     document.addEventListener("keydown", detectKeyDown);
@@ -72,7 +71,7 @@ export const HomeCarousel = () => {
         setCurrentImage(
           currentImage === 0 ? imageLength - 1 : currentImage - 1
         );
-        setCount(count === 1 ? product.imgs.length : count - 1);
+        setCount(count === 1 ? house.imgs.length : count - 1);
       }
     };
     document.addEventListener("keydown", detectKeyDown);
@@ -87,6 +86,8 @@ export const HomeCarousel = () => {
           setViewer={setViewer}
           currentImage={currentImage}
           setCurrentImage={setCurrentImage}
+          count={count}
+          setCount={setCount}
         />
       ) : (
         <div className="col-sm-12 col-md-10 col-lg-10 col-xxl-8 mx-auto p-3 mt-4">
@@ -110,7 +111,7 @@ export const HomeCarousel = () => {
             >
               <div className="carousel-inner ">
                 <div className="carousel-item active">
-                  {product.imgs.map((data, index) => {
+                  {house.imgs.map((data, index) => {
                     return (
                       <div
                         key={index}
@@ -137,8 +138,9 @@ export const HomeCarousel = () => {
 
               <div className="count-style">
                 <div className="count-numbers">
-                  <p>{count}</p>
-                  <p>/ {product.imgs.length}</p>
+                  <p>
+                    {count} / {house.imgs.length}
+                  </p>
                 </div>
               </div>
               <button
@@ -172,7 +174,7 @@ export const HomeCarousel = () => {
             {/* CONTENEDOR DE IMAGENES PURO CODIGO*/}
 
             {/*  <div className="content-img">
-              {product.imgs.map((data, index) => {
+              {house.imgs.map((data, index) => {
                 return (
                   <div
                     key={index}
@@ -191,7 +193,7 @@ export const HomeCarousel = () => {
               <div className="count-style">
                 <div className="count-numbers">
                   <p>{count}</p>
-                  <p>/ {product.imgs.length}</p>
+                  <p>/ {house.imgs.length}</p>
                 </div>
               </div>
             </div> */}
@@ -211,7 +213,7 @@ export const HomeCarousel = () => {
 
           <div className="panel-image">
             <div className="wrapper-trips">
-              {product.imgs.map((data, index) => (
+              {house.imgs.map((data, index) => (
                 <div className="image-space" key={index}>
                   <img
                     className={currentImage === index ? "clicked" : "noclicked"}
@@ -232,28 +234,28 @@ export const HomeCarousel = () => {
           <div className="row ">
             <div className="col-md-8">
               <h3 className="pb-4 mb-4 fst-italic border-bottom">
-                {product.direction}
+                {house.direction}
               </h3>
               <div className="title-home">
                 <div className="price-box">
-                  <h4>{product.price}€</h4>
+                  <h4>{house.price}€</h4>
                 </div>
 
-                {product.type !== "rental" ? (
+                {house.type !== "rental" ? (
                   <>
                     <div
                       className={
-                        product.available ? "btn btn-success" : "btn btn-danger"
+                        house.available ? "btn btn-success" : "btn btn-danger"
                       }
                     >
-                      {product.available ? "DISPONIBLE" : "VENDIDO"}
+                      {house.available ? "DISPONIBLE" : "VENDIDO"}
                     </div>
                     <button
                       className="btn btn-success"
                       data-bs-toggle="modal"
                       data-bs-target="#staticBackdrop"
                     >
-                      Plano
+                      Ver plano
                     </button>
                   </>
                 ) : (
@@ -267,20 +269,20 @@ export const HomeCarousel = () => {
                   <div className="col-12 space-details">
                     <div className="icon-details" title="Habitaciones">
                       <FaBed className="me-2" />
-                      <p>{product.rooms}</p>
+                      <p>{house.rooms}</p>
                     </div>
                     <div className="icon-details" title="Baños">
                       <FaBath className="me-2" />
-                      <p>{product.toilets}</p>
+                      <p>{house.toilets}</p>
                     </div>
                     <div className="icon-details" title="metros">
                       <FaRulerCombined className="me-2" />
-                      <p>{product.meters}</p>
+                      <p>{house.meters}</p>
                     </div>
                   </div>
                 </div>
 
-                <p className="description-paragraph">{product.description}</p>
+                <p className="description-paragraph">{house.description}</p>
                 <hr />
                 <h5>Caracteristicas del inmueble</h5>
 
@@ -290,26 +292,26 @@ export const HomeCarousel = () => {
                     <tr>
                       <td>Planta</td>
                       <td></td>
-                      <td style={{ textAlign: "right" }}>{product.floor}</td>
+                      <td style={{ textAlign: "right" }}>{house.floor}</td>
                     </tr>
                     <tr>
                       <td>Aire acondicionado</td>
                       <td></td>
                       <td className="" style={{ textAlign: "right" }}>
-                        {product.air ? "si" : "no"}
+                        {house.air ? "si" : "no"}
                       </td>
                     </tr>
                     <tr>
                       <td>Calefacción</td>
                       <td></td>
                       <td style={{ textAlign: "right" }}>
-                        {product.heating ? "si" : "no"}
+                        {house.heating ? "si" : "no"}
                       </td>
                     </tr>
                     <tr>
                       <td>Año de construcción</td>
                       <td></td>
-                      <td style={{ textAlign: "right" }}>{product.year}</td>
+                      <td style={{ textAlign: "right" }}>{house.year}</td>
                     </tr>
                   </tbody>
                 </table>

@@ -1,12 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import "./ViewerComponent.css";
 import { useParams } from "react-router-dom";
 import products from "./../../data/product";
-import {
-  AiOutlineCloseCircle,
-  AiFillCaretLeft,
-  AiFillCaretRight,
-} from "react-icons/ai";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 export const ViewerComponent = ({
   data,
@@ -14,6 +10,8 @@ export const ViewerComponent = ({
   setViewer,
   currentImage,
   setCurrentImage,
+  count,
+  setCount,
 }) => {
   const { id } = useParams();
   const product = products.find((p) => p._id === id);
@@ -23,22 +21,13 @@ export const ViewerComponent = ({
   /* if (Array.isArray(product) || cantidad === 0) return; */
   const nextImage = () => {
     setCurrentImage(currentImage === imageLength - 1 ? 0 : currentImage + 1);
+    setCount(count === product.imgs.length ? 1 : count + 1);
   };
 
   const previousImage = () => {
     setCurrentImage(currentImage === 0 ? imageLength - 1 : currentImage - 1);
+    setCount(count === 1 ? product.imgs.length : count - 1);
   };
-
-  /*   const handleClick = (index) => {
-    
-    const wordSlider = product.imgs[index];
-    setWordData(wordSlider);
-  }; */
-
-  /*   const next = (index) => {
-    const wordSlider = product.imgs[index];
-    setWordData(wordSlider + 1);
-  }; */
   return (
     <div>
       <div className="viewer-content">
@@ -58,7 +47,7 @@ export const ViewerComponent = ({
           className="carousel slide col-12 mt-5"
           data-bs-ride="carousel"
         >
-          <div className="carousel-inner ">
+          <div className="carousel-inner">
             <div className="carousel-item active">
               {product.imgs.map((data, index) => {
                 return (
@@ -72,7 +61,7 @@ export const ViewerComponent = ({
                   >
                     {currentImage === index && (
                       <img
-                        className="current-image"
+                        className="full-image"
                         src={data.value}
                         onClick={() => {
                           verPhoto();
@@ -82,6 +71,13 @@ export const ViewerComponent = ({
                   </div>
                 );
               })}
+              <div className="full-count mb-2">
+                <div className="full-numbers">
+                  <p>
+                    {count} / {product.imgs.length}
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -113,32 +109,8 @@ export const ViewerComponent = ({
           </button>
         </div>
 
-        <div>
-          {/*     <button
-            onClick={() => {
-              next();
-            }}
-          >
-            NEXT
-          </button> */}
-        </div>
-        <div>
-          {/* <div className="wrapper-max ">
-            {product.imgs.map((data, i) => (
-              <div className="image-space " key={i}>
-                <img
-                  className={wordData.id == i ? "clicked" : "noclicked"}
-                  src={data.value}
-                  onClick={() => {
-                    handleClick(i);
-                  }}
-                  height="70"
-                  width="100"
-                />
-              </div>
-            ))}
-          </div> */}
-        </div>
+        <div></div>
+        <div></div>
       </div>
     </div>
   );

@@ -41,6 +41,7 @@ padding-right: 15px;
   object-fit:cover;
   border-radius: 20px;
   object-position: center center;
+  cursor: pointer;
 }
 
 .photo {

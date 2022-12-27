@@ -1,7 +1,9 @@
-const products = [
+export const products = [
   {
     _id: "1",
     type: "sale",
+    base: "House",
+    country: "Canada",
     direction: "Calle del Alcalde Manuel Gómez",
     imgs: [
       {
@@ -92,7 +94,7 @@ const products = [
     ],
     description:
       "Fantástico inmueble de 100 metros, en 3º planta. Cuenta con un amplio y luminoso salón con terraza incorporada, 3 dormitorios ( antes 4), cocina equipada y baño. Persianas motorizadas. Ventanas de climalit oscilobatientes. Suelo de parquet, acuchillado recientemente. Aire acondicionado. Excelente ubicación sobre avenida principal. Rodeado de todo tipo de servicios y transporte publico. Zonas verdes y recreativas. Llámenos y con mucho gusto coordinaremos su visita.",
-    price: 305.089,
+    price: "140000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -107,6 +109,8 @@ const products = [
   {
     _id: "2",
     type: "sale",
+    base: "House",
+    country: "Usa",
     direction: "Calle Paseo de los Prados",
     imgs: [
       {
@@ -167,7 +171,7 @@ const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: 250.999,
+    price: "160000",
     flat: "https://cyrarquitectura.com/wp-content/uploads/2019/02/P01-Planos-A3_003.jpg",
     rooms: 4,
     toilets: 2,
@@ -182,6 +186,8 @@ const products = [
   {
     _id: "3",
     type: "sale",
+    base: "House",
+    country: "Canada",
     direction: "Calle Alonso de Tobar",
     imgs: [
       {
@@ -242,7 +248,7 @@ const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: 305.089,
+    price: "150000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -257,6 +263,8 @@ const products = [
   {
     _id: "4",
     type: "rental",
+    base: "Apartament",
+    country: "Usa",
     direction: "Calle Martinita Dolores",
     imgs: [
       {
@@ -317,7 +325,7 @@ const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: 700,
+    price: "130000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -332,6 +340,8 @@ const products = [
   {
     _id: "5",
     type: "rental",
+    base: "House",
+    country: "Canada",
     direction: "Calle Martinita Dolores",
     imgs: [
       {
@@ -392,7 +402,7 @@ const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: 700,
+    price: "80000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -407,6 +417,8 @@ const products = [
   {
     _id: "6",
     type: "rental",
+    base: "House",
+    country: "Canada",
     direction: "Calle Martinita Dolores",
     imgs: [
       {
@@ -467,7 +479,84 @@ const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: 700,
+    price: "150000",
+    flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
+    rooms: 3,
+    toilets: 2,
+    garage: true,
+    meters: 100,
+    floor: 3,
+    air: true,
+    heating: false,
+    year: 2011,
+    available: false,
+  },
+  {
+    _id: "7",
+    type: "sale",
+    base: "House",
+    country: "Canada",
+    direction: "Calle Martinita Dolores",
+    imgs: [
+      {
+        id: 0,
+        value:
+          "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 1,
+        value:
+          "https://images.pexels.com/photos/1457841/pexels-photo-1457841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 2,
+        value:
+          "https://images.pexels.com/photos/1454804/pexels-photo-1454804.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 3,
+        value:
+          "https://images.pexels.com/photos/1457842/pexels-photo-1457842.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+      },
+      {
+        id: 4,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 5,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 6,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+      {
+        id: 7,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 8,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 9,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 10,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+    ],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    price: "170000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
