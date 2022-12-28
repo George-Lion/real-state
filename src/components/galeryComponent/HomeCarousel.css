@@ -39,7 +39,7 @@ padding-right: 15px;
   min-height: 200px;
   max-height: 550px;
   object-fit:cover;
-  border-radius: 20px;
+  border-radius: 50px 0px 50px 0px;
   object-position: center center;
   cursor: pointer;
 }

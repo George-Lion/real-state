@@ -32,7 +32,7 @@ export const PriceRangeDropdown = () => {
     <div>
       <div className="dropdown">
         <button
-          className="btn btn-secondary d-flex"
+          className="btn-light d-flex border pt-2"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
@@ -40,7 +40,7 @@ export const PriceRangeDropdown = () => {
           style={{ fontSize: "12px" }}
         >
           <div className="me-2">
-            {price}
+            <strong>{price}</strong>
             <p style={{ fontSize: "10px" }}>Choose price range</p>
           </div>
           <div className="mt-2" style={{ fontSize: "17px" }}>
@@ -48,8 +48,8 @@ export const PriceRangeDropdown = () => {
           </div>
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li>
-            <div>
+          <li className="ms-3">
+            <div style={{ cursor: "pointer" }}>
               {prices.map((price, index) => {
                 return (
                   <div key={index} onClick={() => setPrice(price.value)}>

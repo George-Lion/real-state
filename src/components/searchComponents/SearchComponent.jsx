@@ -12,7 +12,7 @@ export const SearchComponent = () => {
   return (
     <>
       <div className="">
-        <div className="d-flex justify-content-center mt-4">
+        <div className="d-flex justify-content-center mt-5">
           <CountryDropdown />
           <PropertyDropdown />
           <PriceRangeDropdown />

@@ -233,9 +233,12 @@ export const HomeCarousel = () => {
 
           <div className="row ">
             <div className="col-md-8">
-              <h3 className="pb-4 mb-4 fst-italic border-bottom">
-                {house.direction}
-              </h3>
+              <div className="pb-1 mb-3 fst-italic border-bottom">
+                <h3>{house.direction}</h3>
+                <div>
+                  <h4>{house.country}</h4>
+                </div>
+              </div>
               <div className="title-home">
                 <div className="price-box">
                   <h4>{house.price}€</h4>

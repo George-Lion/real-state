@@ -9,7 +9,7 @@ export const PropertyDropdown = () => {
     <div>
       <div className="dropdown">
         <button
-          className="btn btn-secondary d-flex"
+          className="btn-light d-flex border pt-2"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
@@ -17,7 +17,7 @@ export const PropertyDropdown = () => {
           style={{ fontSize: "12px" }}
         >
           <div className="me-2">
-            {property}
+            <strong>{property}</strong>
             <p style={{ fontSize: "10px" }}>Select your place</p>
           </div>
           <div className="mt-2" style={{ fontSize: "17px" }}>
@@ -25,8 +25,8 @@ export const PropertyDropdown = () => {
           </div>
         </button>
         <ul className="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-          <li>
-            <div>
+          <li className="ms-3">
+            <div style={{ cursor: "pointer" }}>
               {properties.map((property, index) => {
                 return (
                   <div key={index} onClick={() => setProperty(property)}>
