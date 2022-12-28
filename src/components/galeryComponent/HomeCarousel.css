@@ -11,27 +11,22 @@
 .count-style{
   display:flex;
   justify-content: end;
-
- position:relative;
+  position:relative;
   margin: auto;
-width: 100%;
-height: 40px;
-margin-top: -55px;
-color: aliceblue;
-padding-right: 15px;
-
+  width: 100%;
+  height: 40px;
+  margin-top: -65px;
+  color: aliceblue;
+  padding-right: 40px;
 }
 
-
-
 .count-numbers{
-  width: 70px;
+  width: 90px;
   display: flex;
   background-color: rgba(0,0,0,0.6);
-  border-radius: 15px;
+  border-radius: 50px 10px 50px 10px;
   padding: 8px;
   justify-content: center;
-
 }
 
 .current-image{
@@ -39,7 +34,7 @@ padding-right: 15px;
   min-height: 200px;
   max-height: 550px;
   object-fit:cover;
-  border-radius: 50px 0px 50px 0px;
+  border-radius: 80px 10px 80px 10px;
   object-position: center center;
   cursor: pointer;
 }
@@ -84,25 +79,20 @@ padding-right: 15px;
 .wrapper-trips::-webkit-scrollbar {
   -webkit-appearance: none;
   height: 10px;
-
 }
 
 .wrapper-trips::-webkit-scrollbar-button:increment,
 .contenedor::-webkit-scrollbar-button {
   display: none;
-  
 }
-
 
 .wrapper-trips::-webkit-scrollbar-thumb {
   background-color: #212529;
   border-radius: 20px;
-  
 }
 
 .wrapper-trips::-webkit-scrollbar-button:end {
   display: none;
-  
 }
 
 .image-space{
@@ -113,8 +103,7 @@ cursor: pointer;
 .square-image{
   width: 100px;
   height: 80px;
-  margin-top: 10px;
-  
+  margin-top: 10px;  
 }
 
 .square-content{
@@ -129,6 +118,7 @@ cursor: pointer;
   text-align: center;
   margin-top:30px ;
 }
+
 .flex_row{
   justify-content: center;
   display: flex;
@@ -139,15 +129,15 @@ cursor: pointer;
 padding-left: 20px;
 cursor: pointer;
 border-radius: 10px;
-
 }
+
 .clicked{
-border: 5px solid rgb(26, 155, 47);
-border-radius: 10px;
+border: 5px solid rgb(138, 138, 138);
+border-radius: 20px 5px 20px 5px ;
 
 }
 .noclicked{
-  border-radius: 10px;
+  border-radius: 20px 5px 20px 5px ;
 }
 
 .elements{
@@ -253,6 +243,31 @@ display: flex;
   .current-image{
     max-height: 200px;
   }  
+
+  .count-style{
+    height: 35px;
+    margin-top: -45px;
+    padding-right: 25px;
+    font-size: 14px;
+    
+  }
+  
+  .count-numbers{
+    width: 90px;
+    border-radius: 40px 10px 40px 10px;
+    padding: 5px;
+  }
+
+  .current-image{
+    width: 100%;
+    object-fit:cover;
+    border-radius: 60px 10px 60px 10px;
+    object-position: center center;
+    cursor: pointer;
+  }
+
+
+
   
 }
 

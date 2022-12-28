@@ -90,7 +90,7 @@ const HouseContextProvider = ({ children }) => {
       //if price is not default
 
       if (!isDefault(price) && isDefault(country) && isDefault(property)) {
-        if (housePrice >= minPrice && house <= maxPrice) {
+        if (housePrice >= minPrice && housePrice <= maxPrice) {
           return house;
         }
       }
