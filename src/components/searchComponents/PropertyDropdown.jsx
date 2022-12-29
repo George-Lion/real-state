@@ -9,12 +9,12 @@ export const PropertyDropdown = () => {
     <div>
       <div className="dropdown">
         <button
-          className="btn-light d-flex border pt-2"
+          className="btn d-flex border pt-2 text-white"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-          style={{ fontSize: "12px" }}
+          style={{ fontSize: "12px", backgroundColor: "#428DE5" }}
         >
           <div className="me-2">
             <strong>{property}</strong>

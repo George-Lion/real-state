@@ -1,0 +1,26 @@
+.pic-info{
+  height: 300px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+.pic-box{
+  border: none;
+}
+
+.button-selector{
+  border-radius: 15px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  background-color: #428DE5;
+  height: 40px;
+  color: white;
+  font-weight: 700;
+}
+
+.button-selector:active {
+  background-color: #045593;
+  box-shadow: 0 2px #666;
+  transform: translateY(4px);
+}

@@ -246,13 +246,6 @@ export const HomeCarousel = () => {
 
                 {house.type !== "rental" ? (
                   <>
-                    <div
-                      className={
-                        house.available ? "btn btn-success" : "btn btn-danger"
-                      }
-                    >
-                      {house.available ? "DISPONIBLE" : "VENDIDO"}
-                    </div>
                     <button
                       className="btn btn-success"
                       data-bs-toggle="modal"

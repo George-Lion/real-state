@@ -1,4 +1,9 @@
 import React from "react";
+import "./Carousel.css";
+import img0 from "./../../assets/img0.jpg";
+import img1 from "./../../assets/img1.jpg";
+import img2 from "./../../assets/img2.jpg";
+import { Link } from "react-router-dom";
 
 export const Carousel = () => {
   return (
@@ -32,24 +37,23 @@ export const Carousel = () => {
         </div>
         <div className="carousel-inner" style={{ maxHeight: "600px" }}>
           <div className="carousel-item active" style={{ maxHeight: "600px" }}>
-            <img
-              src="https://images.pexels.com/photos/7415097/pexels-photo-7415097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="d-block w-100"
-              alt="..."
-            />
+            <Link className="" to="/sale">
+              <img
+                src={img0}
+                className="img-0 d-block w-100 "
+                alt="fotografía chalet"
+              />
+            </Link>
             <div className="carousel-caption d-none d-md-block">
-              <h5>First slide label</h5>
-              <p>
-                Some representative placeholder content for the first slide.
-              </p>
+              <h2>
+                <strong>
+                  Pisos en venta en las zonas más buscadas de España
+                </strong>
+              </h2>
             </div>
           </div>
           <div className="carousel-item" style={{ maxHeight: "600px" }}>
-            <img
-              src="https://images.pexels.com/photos/3209045/pexels-photo-3209045.jpeg?auto=compress&cs=tinysrgb&w=1600"
-              className="d-block w-100"
-              alt="..."
-            />
+            <img src={img1} className="img-1 d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
               <h5>Second slide label</h5>
               <p>
@@ -58,15 +62,14 @@ export const Carousel = () => {
             </div>
           </div>
           <div className="carousel-item" style={{ maxHeight: "600px" }}>
-            <img
-              src="https://images.pexels.com/photos/7415097/pexels-photo-7415097.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
-              className="d-block w-100"
-              alt="..."
-            />
+            <img src={img2} className="img-2 d-block w-100" alt="..." />
             <div className="carousel-caption d-none d-md-block">
-              <h5>Third slide label</h5>
+              <h5>
+                <strong>Encuentra el lugar de tus sueños</strong>
+              </h5>
               <p>
-                Some representative placeholder content for the third slide.
+                ¡Contamos con una gran variedad de inmuebles donde puede estar
+                el tuyo!
               </p>
             </div>
           </div>

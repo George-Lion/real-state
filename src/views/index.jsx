@@ -3,6 +3,7 @@ import { Carousel } from "../components/homeComponent/Carousel";
 import { Feartures } from "../components/homeComponent/Feartures";
 import Jumbotron from "../components/homeComponent/Jumbotron";
 import { motion } from "framer-motion";
+import { SaleInfo } from "../components/homeComponent/SaleInfo";
 
 export const Landing = ({ isVisible }) => {
   return (
@@ -13,6 +14,7 @@ export const Landing = ({ isVisible }) => {
       transition={{ duration: 0.4 }}
     >
       <Carousel />
+      <SaleInfo />
       <Jumbotron />
       <Feartures />
     </motion.div>

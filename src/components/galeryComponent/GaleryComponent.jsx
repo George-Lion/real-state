@@ -12,8 +12,11 @@ export const GaleryComponent = () => {
   //if loading is true
   if (loading) {
     return (
-      <div className="d-flex justify-content-center mt-5">
-        <div className="spinner-border text-danger" role="status">
+      <div
+        className="d-flex justify-content-center mt-5"
+        style={{ height: "700px" }}
+      >
+        <div className="spinner-border text-danger mt-5" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
       </div>
@@ -101,36 +104,3 @@ export const GaleryComponent = () => {
     </div>
   );
 };
-
-{
-  /* <div className="image-box">
-                  <img
-                    className="image-view"
-                    src={house.imgs[0]["value"]}
-                    alt=""
-                  />
-                </div>
-                <div className="home-details">
-                  <h1>{house.direction}</h1>
-                  <p>{house.description}</p>
-                  <div className="home-numbers">
-                    <p className="home-detail">
-                      <FaBed />
-                      {house.rooms}
-                    </p>
-                    <p className="home-detail">
-                      {" "}
-                      <FaBath />
-                      {house.toilets}
-                    </p>
-                    <p className="home-detail">
-                      <BsArrowsMove />
-                      {house.meters}
-                    </p>
-                    <p className="home-detail">
-                      <BsArrowsMove />
-                      {house.country}
-                    </p>
-                  </div>
-                </div> */
-}
