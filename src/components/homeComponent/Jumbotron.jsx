@@ -23,7 +23,7 @@ export const Jumbotron = () => {
           </div>
           <div className=" col-lg-6">
             <h1 className="display-5 fw-bold lh-1 mb-3 text-white">
-              ¿Quieres hacer un cambio en tu vida?
+              ¿Quieres hacer un cambio de vivienda?
             </h1>
             <p className="lead text-white">
               Quickly design and customize responsive mobile-first sites with

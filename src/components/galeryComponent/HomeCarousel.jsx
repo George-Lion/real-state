@@ -233,7 +233,7 @@ export const HomeCarousel = () => {
 
           <div className="row ">
             <div className="col-md-8">
-              <div className="pb-1 mb-3 fst-italic border-bottom">
+              <div className="pb-1 mb-4 fst-italic border-bottom">
                 <h3>{house.direction}</h3>
                 <div>
                   <h4>{house.country}</h4>
@@ -241,13 +241,15 @@ export const HomeCarousel = () => {
               </div>
               <div className="title-home">
                 <div className="price-box">
-                  <h4>{house.price}€</h4>
+                  <h4 className="text-white">
+                    <strong>{house.price}€</strong>
+                  </h4>
                 </div>
 
                 {house.type !== "rental" ? (
                   <>
                     <button
-                      className="btn btn-success"
+                      className="col-3 border rounded-pill bg-dark text-light"
                       data-bs-toggle="modal"
                       data-bs-target="#staticBackdrop"
                     >
@@ -260,7 +262,7 @@ export const HomeCarousel = () => {
                 <FlatModal id="staticBackdrop" />
               </div>
 
-              <article className="blog-post mt-5">
+              <article className="blog-post mt-4">
                 <div className="d-flex">
                   <div className="col-12 space-details">
                     <div className="icon-details" title="Habitaciones">
@@ -324,9 +326,7 @@ export const HomeCarousel = () => {
 
               {/*  Mortgage */}
 
-              <div className="mortgage-section col-12 mt-5">
-                <h4>Calcula tu hipoteca</h4>
-              </div>
+              <div className="mortgage-section col-12 mt-5"></div>
             </div>
 
             {/*  second column */}

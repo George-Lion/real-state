@@ -16,7 +16,7 @@ export const Landing = ({ isVisible }) => {
       <Carousel />
       <SaleInfo />
       <Jumbotron />
-      <Feartures />
+      {/* <Feartures /> */}
     </motion.div>
   );
 };

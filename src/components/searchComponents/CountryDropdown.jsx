@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { HouseContext } from "./../HouseContext";
 import { TiArrowSortedDown } from "react-icons/ti";
+import { ImLocation } from "react-icons/im";
+import "./CountryDropdown.css";
 
 export const CountryDropdown = () => {
   const { country, setCountry, countries } = useContext(HouseContext);
@@ -9,16 +11,24 @@ export const CountryDropdown = () => {
     <div>
       <div className="dropdown">
         <button
-          className="btn d-flex border pt-2 text-white"
+          className="btn d-flex justify-content-between border pt-2 text-dark col-12 col-sm-12"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-          style={{ fontSize: "12px", backgroundColor: "#428DE5" }}
+          style={{ fontSize: "15px", backgroundColor: "white" }}
         >
-          <div className="me-2">
-            <strong>{country}</strong>
-            <p style={{ fontSize: "10px" }}>Select your place</p>
+          <div className="d-flex me-2">
+            <div
+              className="mt-2 me-2"
+              style={{ fontSize: "1.2rem", color: "#428de5" }}
+            >
+              <ImLocation />
+            </div>
+            <div className="mt-1">
+              <strong>{country}</strong>
+              <p style={{ fontSize: "10px" }}>Select your place</p>
+            </div>
           </div>
           <div className="mt-2" style={{ fontSize: "17px" }}>
             <TiArrowSortedDown />

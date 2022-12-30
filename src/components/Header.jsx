@@ -29,15 +29,15 @@ export const Header = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link active" to="/services">
-                Services
+                Servicios
               </Link>
             </li>
-            <li className="nav-item">
+            <li className="nav-item ">
               <div id="navbarNavDarkDropdown">
                 <ul className="navbar-nav">
-                  <li className="nav-item dropdown">
+                  <li className="nav-item dropdown ">
                     <a
-                      className="nav-link dropdown-toggle"
+                      className="nav-link dropdown-toggle  text-white"
                       href="#"
                       id="navbarDarkDropdownMenuLink"
                       role="button"
@@ -67,7 +67,7 @@ export const Header = () => {
             </li>
             <li className="nav-item">
               <Link className="nav-link active" to="/contact">
-                Contact
+                Contacto
               </Link>
             </li>
           </ul>

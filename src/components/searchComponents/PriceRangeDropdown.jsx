@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { HouseContext } from "./../HouseContext";
 import { TiArrowSortedDown } from "react-icons/ti";
+import { RiMoneyEuroCircleFill } from "react-icons/ri";
 
 export const PriceRangeDropdown = () => {
   const { price, setPrice } = useContext(HouseContext);
@@ -10,38 +11,46 @@ export const PriceRangeDropdown = () => {
       value: "Price range (any)",
     },
     {
-      value: "100000 - 130000",
+      value: "100.000 - 130.000",
     },
     {
-      value: "130000 - 160000",
+      value: "130.000 - 160.000",
     },
     {
-      value: "160000 - 190000",
+      value: "160.000 - 190.000",
     },
     {
-      value: "190000 - 220000",
+      value: "400.000 - 500.000",
     },
     {
-      value: "10000 - 30000",
+      value: "10.000 - 30.000",
     },
     {
-      value: "30000 - 40000",
+      value: "30.000 - 40.000",
     },
   ];
   return (
     <div>
       <div className="dropdown">
         <button
-          className="btn d-flex border pt-2 text-white"
+          className="btn d-flex justify-content-between border pt-2 text-dark col-12 col-sm-12"
           type="button"
           id="dropdownMenuButton1"
           data-bs-toggle="dropdown"
           aria-expanded="false"
-          style={{ fontSize: "12px", backgroundColor: "#428DE5" }}
+          style={{ fontSize: "15px", backgroundColor: "white" }}
         >
-          <div className="me-2">
-            <strong>{price}</strong>
-            <p style={{ fontSize: "10px" }}>Choose price range</p>
+          <div className="d-flex me-2">
+            <div
+              className="mt-2 me-2"
+              style={{ fontSize: "1.2rem", color: "#428de5" }}
+            >
+              <RiMoneyEuroCircleFill />
+            </div>
+            <div className="mt-1">
+              <strong>{price}</strong>
+              <p style={{ fontSize: "10px" }}>Choose price range</p>
+            </div>
           </div>
           <div className="mt-2" style={{ fontSize: "17px" }}>
             <TiArrowSortedDown />

@@ -3,7 +3,7 @@ import "./SaleInfo.css";
 export const SaleInfo = () => {
   return (
     <div>
-      <div className="album py-5 bg-light">
+      <div className="album py-5">
         <div className="container mt-1">
           <h4>
             <strong>Todos nuestros servicios al alcance de un click</strong>
@@ -55,7 +55,7 @@ export const SaleInfo = () => {
                     <div className="btn-group"></div>
                   </div>
                 </div>
-                <button className="button-selector col-md-5">Info</button>
+                <button className="button-selector col-md-5">Servicios</button>
               </div>
             </div>
             <div className="col">

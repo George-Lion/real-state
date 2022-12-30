@@ -12,11 +12,14 @@ export const SearchComponent = () => {
   return (
     <>
       <div className="">
-        <div className="d-flex justify-content-center mt-5 mb-4">
+        <div className="search-box">
           <CountryDropdown />
           <PropertyDropdown />
           <PriceRangeDropdown />
-          <button className="search-bottom" onClick={() => handleClick()}>
+          <button
+            className="search-bottom col-12 col-sm-12"
+            onClick={() => handleClick()}
+          >
             <FaSearch />
           </button>
         </div>

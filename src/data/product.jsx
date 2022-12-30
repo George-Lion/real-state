@@ -1,105 +1,60 @@
+import Pic1 from "./../assets/img/house1/pic1.png";
+import Pic2 from "./../assets/img/house1/pic2.png";
+import Pic3 from "./../assets/img/house1/pic3.png";
+import Pic4 from "./../assets/img/house1/pic4.png";
+import Pic5 from "./../assets/img/house1/pic5.png";
+import Pic6 from "./../assets/img/house1/pic6.png";
+import Pic7 from "./../assets/img/house1/pic7.png";
+import Pic8 from "./../assets/img/house1/pic8.png";
 export const products = [
   {
     _id: "1",
     type: "sale",
-    base: "House",
+    base: "Casa",
     country: "Madrid",
     direction: "Calle del Alcalde Manuel Gómez",
     imgs: [
       {
         id: 0,
-        value:
-          "https://media.revistaad.es/photos/61824d020d23208312200f9f/3:2/w_3024,h_2016,c_limit/Lorna%20de%20Santos%204.jpg",
+        value: Pic1,
       },
       {
         id: 1,
-        value:
-          "https://images.adsttc.com/media/images/5e68/48ed/b357/658e/fb00/0441/large_jpg/AM1506.jpg?1583892706",
+        value: Pic2,
       },
       {
         id: 2,
-        value:
-          "https://images.pexels.com/photos/7028069/pexels-photo-7028069.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        value: Pic3,
       },
       {
         id: 3,
-        value:
-          "https://images.pexels.com/photos/2507016/pexels-photo-2507016.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        value: Pic4,
       },
       {
         id: 4,
-        value:
-          "https://images.pexels.com/photos/164595/pexels-photo-164595.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        value: Pic5,
       },
       {
         id: 5,
-        value:
-          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+        value: Pic6,
       },
       {
         id: 6,
-        value:
-          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+        value: Pic7,
       },
       {
         id: 7,
-        value:
-          "https://images.pexels.com/photos/210604/pexels-photo-210604.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        id: 8,
-        value:
-          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
-      },
-      {
-        id: 9,
-        value:
-          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
-      },
-      {
-        id: 10,
-        value:
-          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
-      },
-      {
-        id: 11,
-        value:
-          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
-      },
-      {
-        id: 12,
-        value:
-          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
-      },
-      {
-        id: 13,
-        value:
-          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
-      },
-      {
-        id: 14,
-        value:
-          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
-      },
-      {
-        id: 15,
-        value:
-          "https://images.pexels.com/photos/6642522/pexels-photo-6642522.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
-      },
-      {
-        id: 16,
-        value:
-          "https://images.pexels.com/photos/6642517/pexels-photo-6642517.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+        value: Pic8,
       },
     ],
     description:
       "Fantástico inmueble de 100 metros, en 3º planta. Cuenta con un amplio y luminoso salón con terraza incorporada, 3 dormitorios ( antes 4), cocina equipada y baño. Persianas motorizadas. Ventanas de climalit oscilobatientes. Suelo de parquet, acuchillado recientemente. Aire acondicionado. Excelente ubicación sobre avenida principal. Rodeado de todo tipo de servicios y transporte publico. Zonas verdes y recreativas. Llámenos y con mucho gusto coordinaremos su visita.",
-    price: "140000",
+    price: "460.000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
-    rooms: 3,
+    rooms: 4,
     toilets: 2,
     garage: true,
-    meters: 100,
+    meters: 180,
     floor: 3,
     air: true,
     heating: false,
@@ -109,7 +64,7 @@ export const products = [
   {
     _id: "2",
     type: "sale",
-    base: "House",
+    base: "Casa",
     country: "Madrid",
     direction: "Calle Paseo de los Prados",
     imgs: [
@@ -171,12 +126,12 @@ export const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: "160000",
+    price: "230.000",
     flat: "https://cyrarquitectura.com/wp-content/uploads/2019/02/P01-Planos-A3_003.jpg",
-    rooms: 4,
-    toilets: 2,
+    rooms: 3,
+    toilets: 1,
     garage: true,
-    meters: 92,
+    meters: 90,
     floor: 3,
     air: true,
     heating: false,
@@ -186,9 +141,9 @@ export const products = [
   {
     _id: "3",
     type: "sale",
-    base: "House",
+    base: "Piso",
     country: "Barcelona",
-    direction: "Calle Alonso de Tobar",
+    direction: "Av. los Santos",
     imgs: [
       {
         id: 0,
@@ -248,29 +203,29 @@ export const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: "150000",
+    price: "180.000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
-    toilets: 2,
+    toilets: 1,
     garage: true,
-    meters: 100,
-    floor: 3,
-    air: true,
+    meters: 70,
+    floor: 1,
+    air: false,
     heating: false,
-    year: 2011,
+    year: 1980,
     available: false,
   },
   {
     _id: "4",
     type: "rental",
-    base: "Apartament",
+    base: "Piso",
     country: "Valencia",
-    direction: "Calle Martinita Dolores",
+    direction: "Calle de Palencia",
     imgs: [
       {
         id: 0,
         value:
-          "https://media.npr.org/assets/img/2022/12/05/ap22338046792221-e76eaa7f1532d203f1642ff4397a5c6c48cc6675.jpg",
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
       },
       {
         id: 1,
@@ -325,7 +280,7 @@ export const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: "130000",
+    price: "800",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -340,14 +295,14 @@ export const products = [
   {
     _id: "5",
     type: "rental",
-    base: "House",
+    base: "Casa",
     country: "Valencia",
-    direction: "Calle Martinita Dolores",
+    direction: "Calle los Campos",
     imgs: [
       {
         id: 0,
         value:
-          "https://images.pexels.com/photos/1396122/pexels-photo-1396122.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/2029673/pexels-photo-2029673.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 1,
@@ -402,7 +357,7 @@ export const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: "80000",
+    price: "850",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -417,14 +372,14 @@ export const products = [
   {
     _id: "6",
     type: "rental",
-    base: "House",
+    base: "Piso",
     country: "Vigo",
-    direction: "Calle Martinita Dolores",
+    direction: "Calle Arganda Gali",
     imgs: [
       {
         id: 0,
         value:
-          "https://images.pexels.com/photos/323780/pexels-photo-323780.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
+          "https://images.pexels.com/photos/1457841/pexels-photo-1457841.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
       },
       {
         id: 1,
@@ -479,7 +434,7 @@ export const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: "150000",
+    price: "920",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -494,9 +449,9 @@ export const products = [
   {
     _id: "7",
     type: "sale",
-    base: "House",
+    base: "Casa",
     country: "Vigo",
-    direction: "Calle Martinita Dolores",
+    direction: "Calle Poliester",
     imgs: [
       {
         id: 0,
@@ -556,7 +511,7 @@ export const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: "170000",
+    price: "170.000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -571,9 +526,9 @@ export const products = [
   {
     _id: "8",
     type: "sale",
-    base: "Apartament",
+    base: "Piso",
     country: "Murcia",
-    direction: "Calle Martinita Dolores",
+    direction: "Calle las Palmeras",
     imgs: [
       {
         id: 0,
@@ -633,7 +588,7 @@ export const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: "170000",
+    price: "170.000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -648,7 +603,7 @@ export const products = [
   {
     _id: "9",
     type: "sale",
-    base: "Apartament",
+    base: "Piso",
     country: "Murcia",
     direction: "Calle Martinita Dolores",
     imgs: [
@@ -710,7 +665,7 @@ export const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: "170000",
+    price: "170.000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -725,7 +680,7 @@ export const products = [
   {
     _id: "10",
     type: "rental",
-    base: "Apartament",
+    base: "Piso",
     country: "Murcia",
     direction: "Calle Martinita Dolores",
     imgs: [
@@ -787,7 +742,7 @@ export const products = [
     ],
     description:
       "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
-    price: "170000",
+    price: "1200",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 3,
     toilets: 2,
@@ -797,6 +752,137 @@ export const products = [
     air: true,
     heating: false,
     year: 2011,
+    available: false,
+  },
+  {
+    _id: "11",
+    type: "sale",
+    base: "Casa",
+    country: "Barcelona",
+    direction: "Calle los Palmitos",
+    imgs: [
+      {
+        id: 0,
+        value: Pic7,
+      },
+      {
+        id: 1,
+        value: Pic2,
+      },
+      {
+        id: 2,
+        value: Pic3,
+      },
+      {
+        id: 3,
+        value: Pic4,
+      },
+      {
+        id: 4,
+        value: Pic1,
+      },
+      {
+        id: 5,
+        value: Pic6,
+      },
+      {
+        id: 6,
+        value: Pic7,
+      },
+      {
+        id: 7,
+        value: Pic8,
+      },
+    ],
+    description:
+      "Fantástico inmueble de 100 metros, en 3º planta. Cuenta con un amplio y luminoso salón con terraza incorporada, 3 dormitorios ( antes 4), cocina equipada y baño. Persianas motorizadas. Ventanas de climalit oscilobatientes. Suelo de parquet, acuchillado recientemente. Aire acondicionado. Excelente ubicación sobre avenida principal. Rodeado de todo tipo de servicios y transporte publico. Zonas verdes y recreativas. Llámenos y con mucho gusto coordinaremos su visita.",
+    price: "320.000",
+    flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
+    rooms: 4,
+    toilets: 2,
+    garage: true,
+    meters: 180,
+    floor: 3,
+    air: true,
+    heating: false,
+    year: 2011,
+    available: true,
+  },
+  {
+    _id: "12",
+    type: "sale",
+    base: "Piso",
+    country: "Barcelona",
+    direction: "Calle Flamingo Azul",
+    imgs: [
+      {
+        id: 0,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 1,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48ed/b357/658e/fb00/0441/large_jpg/AM1506.jpg?1583892706",
+      },
+      {
+        id: 2,
+        value:
+          "https://images.adsttc.com/media/images/5e68/490d/b357/658e/fb00/0442/newsletter/AM1536.jpg?1583892738",
+      },
+      {
+        id: 3,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 4,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 5,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 6,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+      {
+        id: 7,
+        value:
+          "https://images.adsttc.com/media/images/5e68/489d/b357/65a1/f300/0215/newsletter/AM1348.jpg?1583892626",
+      },
+      {
+        id: 8,
+        value:
+          "https://images.adsttc.com/media/images/5e68/488d/b357/658e/fb00/043e/slideshow/AM1325_26_27.jpg?1583892610",
+      },
+      {
+        id: 9,
+        value:
+          "https://i.pinimg.com/originals/4f/a5/a0/4fa5a090b53fa4425a6b636df29539cf.jpg",
+      },
+      {
+        id: 10,
+        value:
+          "https://images.adsttc.com/media/images/5e68/48df/b357/65a1/f300/0217/slideshow/AM1491_92.jpg?1583892691",
+      },
+    ],
+    description:
+      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+    price: "130.000",
+    flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
+    rooms: 2,
+    toilets: 1,
+    garage: true,
+    meters: 60,
+    floor: 1,
+    air: false,
+    heating: false,
+    year: 1980,
     available: false,
   },
 ];
