@@ -27,7 +27,7 @@ export const CountryDropdown = () => {
             </div>
             <div className="mt-1">
               <strong>{country}</strong>
-              <p style={{ fontSize: "10px" }}>Select your place</p>
+              <p style={{ fontSize: "10px" }}>Seleccione el lugar</p>
             </div>
           </div>
           <div className="mt-2" style={{ fontSize: "17px" }}>

@@ -11,6 +11,18 @@ export const PriceRangeDropdown = () => {
       value: "Price range (any)",
     },
     {
+      value: "100 - 1000",
+    },
+    {
+      value: "1000 - 2000",
+    },
+    {
+      value: "2000 - 3000",
+    },
+    {
+      value: "30.000 - 40.000",
+    },
+    {
       value: "100.000 - 130.000",
     },
     {
@@ -21,12 +33,6 @@ export const PriceRangeDropdown = () => {
     },
     {
       value: "400.000 - 500.000",
-    },
-    {
-      value: "10.000 - 30.000",
-    },
-    {
-      value: "30.000 - 40.000",
     },
   ];
   return (
@@ -49,7 +55,7 @@ export const PriceRangeDropdown = () => {
             </div>
             <div className="mt-1">
               <strong>{price}</strong>
-              <p style={{ fontSize: "10px" }}>Choose price range</p>
+              <p style={{ fontSize: "10px" }}>Elige un rango de precio</p>
             </div>
           </div>
           <div className="mt-2" style={{ fontSize: "17px" }}>
@@ -61,7 +67,11 @@ export const PriceRangeDropdown = () => {
             <div style={{ cursor: "pointer" }}>
               {prices.map((price, index) => {
                 return (
-                  <div key={index} onClick={() => setPrice(price.value)}>
+                  <div
+                    className="pe-3 pb-1"
+                    key={index}
+                    onClick={() => setPrice(price.value)}
+                  >
                     {price.value}
                   </div>
                 );

@@ -18,6 +18,10 @@ export const HomeCarousel = () => {
   const { id } = useParams();
   const house = houses.find((p) => p._id === id);
 
+  /* FLAT MODAL*/
+
+  const [openModal, setOpenModal] = useState(false);
+
   /* EJECUTA EL VISOR DE FOTOS */
 
   const [viewer, setViewer] = useState(false);
@@ -250,8 +254,7 @@ export const HomeCarousel = () => {
                   <>
                     <button
                       className="col-3 border rounded-pill bg-dark text-light"
-                      data-bs-toggle="modal"
-                      data-bs-target="#staticBackdrop"
+                      onClick={() => setOpenModal(true)}
                     >
                       Ver plano
                     </button>
@@ -259,7 +262,10 @@ export const HomeCarousel = () => {
                 ) : (
                   ""
                 )}
-                <FlatModal id="staticBackdrop" />
+                <FlatModal
+                  open={openModal}
+                  onClose={() => setOpenModal(false)}
+                />
               </div>
 
               <article className="blog-post mt-4">
@@ -371,10 +377,15 @@ export const HomeCarousel = () => {
                 </div>
 
                 <div className="info-content">
-                  <h3>INFO</h3>
+                  <h6>
+                    <strong>También puede contactarnos a través de:</strong>
+                  </h6>
+                  <p>+34 912 33 233</p>
+                  <p>vendo@worldhome.com</p>
+                  <p>Calle Serrano 33</p>
                 </div>
 
-                <div className="p-4">
+                {/*  <div className="p-4">
                   <h4 className="fst-italic">Elsewhere</h4>
                   <ol className="list-unstyled">
                     <li>
@@ -393,7 +404,7 @@ export const HomeCarousel = () => {
                       </a>
                     </li>
                   </ol>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>

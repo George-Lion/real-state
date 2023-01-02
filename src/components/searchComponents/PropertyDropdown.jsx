@@ -26,7 +26,7 @@ export const PropertyDropdown = () => {
             </div>
             <div className="mt-1">
               <strong>{property}</strong>
-              <p style={{ fontSize: "10px" }}>Select your place</p>
+              <p style={{ fontSize: "10px" }}>Seleccione el tipo de vivienda</p>
             </div>
           </div>
           <div className="mt-2" style={{ fontSize: "17px" }}>
@@ -38,7 +38,11 @@ export const PropertyDropdown = () => {
             <div style={{ cursor: "pointer" }}>
               {properties.map((property, index) => {
                 return (
-                  <div key={index} onClick={() => setProperty(property)}>
+                  <div
+                    className="pe-3 pb-1"
+                    key={index}
+                    onClick={() => setProperty(property)}
+                  >
                     {property}
                   </div>
                 );

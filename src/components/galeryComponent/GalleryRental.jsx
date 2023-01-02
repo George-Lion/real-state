@@ -4,7 +4,6 @@ import { BsArrowsMove } from "react-icons/bs";
 import { HouseContext } from "./../HouseContext";
 import "./GaleryComponent.css";
 import { Link } from "react-router-dom";
-import { SearchComponent } from "../searchComponents/SearchComponent";
 
 export const GalleryRental = () => {
   const { houses, loading } = useContext(HouseContext);
@@ -12,8 +11,11 @@ export const GalleryRental = () => {
   //if loading is true
   if (loading) {
     return (
-      <div className="d-flex justify-content-center mt-5">
-        <div className="spinner-border text-danger" role="status">
+      <div
+        className="d-flex justify-content-center mt-5"
+        style={{ height: "700px" }}
+      >
+        <div className="spinner-border text-primary mt-5" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
       </div>
@@ -22,7 +24,10 @@ export const GalleryRental = () => {
 
   if (houses.length < 1) {
     return (
-      <div className="mx-auto w-50 mt-5">
+      <div
+        className="mx-auto w-50"
+        style={{ marginTop: "150px", height: "700px" }}
+      >
         <h3 className="text-center">No hay inmuebles en esta categoria</h3>
       </div>
     );
@@ -43,7 +48,7 @@ export const GalleryRental = () => {
                       className="cards-definition"
                     >
                       <div className="col">
-                        <div className=" shadow-sm m-4">
+                        <div className=" shadow-sm ">
                           <div className="card-image">
                             <img
                               className="image-view"
@@ -53,6 +58,14 @@ export const GalleryRental = () => {
                           </div>
                           <div className="card-body">
                             <p>{house.direction}</p>
+                            <div className="d-flex mb-3">
+                              <div className="base-house">
+                                <p>{house.base}</p>
+                              </div>
+                              <div className="country-house">
+                                <p>{house.country}</p>
+                              </div>
+                            </div>
                             <div className="d-flex justify-content-between align-items-center">
                               <div className="btn-group">
                                 <div className="home-numbers">
@@ -75,6 +88,9 @@ export const GalleryRental = () => {
                                   </p>
                                 </div>
                               </div>
+                            </div>
+                            <div className="">
+                              <h4>{house.price}€</h4>
                             </div>
                           </div>
                         </div>

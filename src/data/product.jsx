@@ -48,7 +48,7 @@ export const products = [
       },
     ],
     description:
-      "Fantástico inmueble de 100 metros, en 3º planta. Cuenta con un amplio y luminoso salón con terraza incorporada, 3 dormitorios ( antes 4), cocina equipada y baño. Persianas motorizadas. Ventanas de climalit oscilobatientes. Suelo de parquet, acuchillado recientemente. Aire acondicionado. Excelente ubicación sobre avenida principal. Rodeado de todo tipo de servicios y transporte publico. Zonas verdes y recreativas. Llámenos y con mucho gusto coordinaremos su visita.",
+      "Fantástico inmueble de 180 metros, 2º alturas. Cuenta con un amplio y luminoso salón que comunica con el jardín, 4 dormitorios, cocina equipada y 2 baños. Persianas motorizadas. Ventanas de climalit oscilobatientes. Suelo de baldosas. Aire acondicionado. Excelente ubicación sobre avenida principal. Rodeado de todo tipo de servicios y transporte publico. Zonas verdes y recreativas. Llámenos y con mucho gusto coordinaremos su visita.",
     price: "460.000",
     flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
     rooms: 4,
@@ -125,7 +125,7 @@ export const products = [
       },
     ],
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      "Fantástico inmueble de 90 metros, 2º alturas. Cuenta con un amplio y luminoso salón que comunica con el jardín, 3 dormitorios, cocina equipada y 1 baños. Persianas motorizadas. Ventanas de climalit oscilobatientes. Suelo de baldosas. Aire acondicionado. Excelente ubicación sobre avenida principal. Rodeado de todo tipo de servicios y transporte publico. Zonas verdes y recreativas. Llámenos y con mucho gusto coordinaremos su visita.",
     price: "230.000",
     flat: "https://cyrarquitectura.com/wp-content/uploads/2019/02/P01-Planos-A3_003.jpg",
     rooms: 3,
@@ -202,9 +202,9 @@ export const products = [
       },
     ],
     description:
-      "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book",
+      "Fantástico inmueble de 70 metros. Cuenta con un amplio y luminoso salón que comunica con el jardín, 3 dormitorios, cocina equipada y 1 baños. Persianas motorizadas. Ventanas de climalit oscilobatientes. Suelo de baldosas. Aire acondicionado. Excelente ubicación sobre avenida principal. Rodeado de todo tipo de servicios y transporte publico. Zonas verdes y recreativas. Llámenos y con mucho gusto coordinaremos su visita.",
     price: "180.000",
-    flat: "https://geekflare.com/wp-content/uploads/2022/08/2d-floor-plan.png",
+    flat: "https://www.elmueble.com/medio/2020/10/16/plano-piso-sacum-01-7d084ffe-1200x802_1aee95f5_1200x802.jpg",
     rooms: 3,
     toilets: 1,
     garage: true,

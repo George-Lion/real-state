@@ -30,7 +30,7 @@ export const ViewerComponent = ({
   };
   return (
     <div>
-      <div className="viewer-content">
+      <div className="viewer-group">
         <div className="close-box">
           <button
             className="close-button mt-3"

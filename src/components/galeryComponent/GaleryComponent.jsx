@@ -16,7 +16,7 @@ export const GaleryComponent = () => {
         className="d-flex justify-content-center mt-5"
         style={{ height: "700px" }}
       >
-        <div className="spinner-border text-danger mt-5" role="status">
+        <div className="spinner-border text-primary mt-5" role="status">
           <span className="visually-hidden">Loading...</span>
         </div>
       </div>
@@ -25,7 +25,10 @@ export const GaleryComponent = () => {
 
   if (houses.length < 1) {
     return (
-      <div className="mx-auto w-50 mt-5">
+      <div
+        className="mx-auto w-50"
+        style={{ marginTop: "150px", height: "700px" }}
+      >
         <h3 className="text-center">No hay inmuebles en esta categoria</h3>
       </div>
     );
