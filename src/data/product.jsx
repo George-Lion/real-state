@@ -1,11 +1,11 @@
-import Pic1 from "./../assets/img/house1/pic1.png";
-import Pic2 from "./../assets/img/house1/pic2.png";
-import Pic3 from "./../assets/img/house1/pic3.png";
-import Pic4 from "./../assets/img/house1/pic4.png";
-import Pic5 from "./../assets/img/house1/pic5.png";
-import Pic6 from "./../assets/img/house1/pic6.png";
-import Pic7 from "./../assets/img/house1/pic7.png";
-import Pic8 from "./../assets/img/house1/pic8.png";
+import Pic1 from "./../assets/img/house1/pic1.jpg";
+import Pic2 from "./../assets/img/house1/pic2.jpg";
+import Pic3 from "./../assets/img/house1/pic3.jpg";
+import Pic4 from "./../assets/img/house1/pic4.jpg";
+import Pic5 from "./../assets/img/house1/pic5.jpg";
+import Pic6 from "./../assets/img/house1/pic6.jpg";
+import Pic7 from "./../assets/img/house1/pic7.jpg";
+import Pic8 from "./../assets/img/house1/pic8.jpg";
 export const products = [
   {
     _id: "1",
