@@ -12,12 +12,12 @@ export const Contact = () => {
     >
       <div className="form-background">
         <div className="d-flex justify-content-center text-light">
-          <h4 className="mt-5">
+          <h4 className="mt-5 m-3">
             <strong>¡Ahora puedes recibir infomación más rapidamente!</strong>
           </h4>
         </div>
         <div className="d-flex justify-content-center text-light mb-2">
-          <h5>
+          <h5 className="m-3">
             Gracias a nuestro gran número de oficinas podemos ubicar la más
             cercana al domicilio
           </h5>

@@ -12,18 +12,11 @@ export const AllServices = () => {
                 <use xlinkHref="#collection"></use>
               </svg>
             </div>
-            <h2>Featured title</h2>
+            <h2>Busca tu vivienda</h2>
             <p>
-              Paragraph of text beneath the heading to explain the heading.
-              We'll add onto it with another sentence and probably just keep
-              going until we run out of words.
+              Seleccciona la vivienda en nuestro buscador y consulta su
+              información.
             </p>
-            <a href="#" className="icon-link">
-              Call to action
-              <svg className="bi" width="1em" height="1em">
-                <use xlinkHref="#chevron-right"></use>
-              </svg>
-            </a>
           </div>
           <div className="feature col">
             <div className="feature-icon bg-primary bg-gradient">
@@ -31,18 +24,8 @@ export const AllServices = () => {
                 <use xlinkHref="#people-circle"></use>
               </svg>
             </div>
-            <h2>Featured title</h2>
-            <p>
-              Paragraph of text beneath the heading to explain the heading.
-              We'll add onto it with another sentence and probably just keep
-              going until we run out of words.
-            </p>
-            <a href="#" className="icon-link">
-              Call to action
-              <svg className="bi" width="1em" height="1em">
-                <use xlinkHref="#chevron-right"></use>
-              </svg>
-            </a>
+            <h2>Consulta su precio</h2>
+            <p>Accede a la valoración estimada de la vivienda.</p>
           </div>
           <div className="feature col">
             <div className="feature-icon bg-primary bg-gradient">
@@ -50,18 +33,11 @@ export const AllServices = () => {
                 <use xlinkHref="#toggles2"></use>
               </svg>
             </div>
-            <h2>Featured title</h2>
+            <h2>Solicita una valoración</h2>
             <p>
-              Paragraph of text beneath the heading to explain the heading.
-              We'll add onto it with another sentence and probably just keep
-              going until we run out of words.
+              Facilítanos una dirección de email y nos pondremos en contacto
+              contigo.
             </p>
-            <a href="#" className="icon-link">
-              Call to action
-              <svg className="bi" width="1em" height="1em">
-                <use xlinkHref="#chevron-right"></use>
-              </svg>
-            </a>
           </div>
         </div>
       </div>

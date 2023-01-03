@@ -23,6 +23,7 @@
 .mapaa{
   width: 100%;
   border-radius: 10px;
+  object-fit:cover;
 }
 
 .divs{
@@ -110,10 +111,10 @@
     padding: 15px;
   }
 
-  .mapa{
+  .mapaa{
     width: 100%;
-    display: flex;
-    margin-bottom: 20px;
+    border-radius: 20px;
+    object-fit:contain;
   }
 
   .divs{

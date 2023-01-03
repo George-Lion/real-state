@@ -13,7 +13,7 @@ export const Feartures = () => {
               </svg>
             </div>
             <div>
-              <h2>Featured title</h2>
+              <h2>Busca tu vivienda</h2>
               <p>
                 Paragraph of text beneath the heading to explain the heading.
                 We'll add onto it with another sentence and probably just keep

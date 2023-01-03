@@ -75,7 +75,9 @@ export const Form = () => {
               </div>
             </div>
             <div className="box-buttom">
-              <button className="send-buttom">Enviar</button>
+              <button className="send-buttom col-12 col-md-3 mt-3">
+                Enviar
+              </button>
             </div>
           </div>
         </div>

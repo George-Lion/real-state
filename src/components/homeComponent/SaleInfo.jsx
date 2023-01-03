@@ -9,7 +9,7 @@ export const SaleInfo = () => {
           <h4>
             <strong>Todos nuestros servicios al alcance de un click</strong>
           </h4>
-          <div className="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 mt-4">
+          <div className="row row-cols-1 row-cols-sm-1  row-cols-md-3 g-3 mt-4">
             <div className="col">
               <div className="card  pic-box">
                 <img
@@ -32,10 +32,8 @@ export const SaleInfo = () => {
                     <div className="btn-group"></div>
                   </div>
                 </div>
-                <Link className="" to="/sale">
-                  <button className="button-selector col-md-5">
-                    Ver inmuebles
-                  </button>
+                <Link className="button-selector col-md-5" to="/sale">
+                  <button className="button-sty ">Ver inmuebles</button>
                 </Link>
               </div>
             </div>
@@ -60,7 +58,9 @@ export const SaleInfo = () => {
                     <div className="btn-group"></div>
                   </div>
                 </div>
-                <button className="button-selector col-md-5">Servicios</button>
+                <Link className="button-selector col-md-5" to="">
+                  <button className="button-sty col-md-5">Servicios</button>
+                </Link>
               </div>
             </div>
             <div className="col">
@@ -78,14 +78,16 @@ export const SaleInfo = () => {
 
                 <div className="mt-3">
                   <p className="card-text">
-                    Con solo enviar el formulario de datos nos encargamos de
-                    todo y te lo enviamos a tu domicilio.
+                    Una buena vista con un café por la mañana no tiene precio.
+                    Estas son las mejores vistas del mes.
                   </p>
                   <div className="d-flex justify-content-between align-items-center">
                     <div className="btn-group"></div>
                   </div>
                 </div>
-                <button className="button-selector col-md-5">Info</button>
+                <Link className="button-selector col-md-5" to="/sale">
+                  <button className="button-sty col-md-5">Info</button>
+                </Link>
               </div>
             </div>
           </div>

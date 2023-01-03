@@ -10,17 +10,23 @@
 
 .button-selector{
   border-radius: 15px;
+  text-align: center;
   cursor: pointer;
   outline: none;
   border: none;
-  background-color: #d3d3d3;
-  height: 40px;
+  background-color: #d5e5ec;
   color: dark;
+  
+}
+.button-sty{
+  height: 40px;
+  border: none;
+  background-color: #d5e5ec;
   font-weight: 700;
 }
 
 .button-selector:active {
-  background-color: #b1b1b1;
+  background-color: #d5e5ec;
   box-shadow: 0 2px #666;
   transform: translateY(4px);
 }
