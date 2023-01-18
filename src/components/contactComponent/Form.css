@@ -33,7 +33,8 @@
 }
 
 .direction{
-  width: 100%;
+  width: 98%;
+  margin: auto;
 }
 
 .piso{
@@ -54,14 +55,16 @@
 }
 
 .datos{
-  width: 100%;
+  width: 95%;
+  display: flex;
+  justify-content: space-around;
  
  
 }
 
 .data{
-  width: 100%;
-  margin: 10px 0 10px 0;
+  width: 95%;
+  margin: 10px 0 0px 0;
   height: 40px;
   border-radius: 10px;
   border: none;
@@ -71,7 +74,13 @@
 
 .box-buttom{
   display: flex;
-  justify-content: right;  
+  justify-content: right; 
+  margin-right: 8px; 
+}
+
+.box-buttom:active{
+  color: rgb(189, 189, 189);
+
 }
 
 .send-buttom{
