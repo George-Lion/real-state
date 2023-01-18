@@ -1,9 +1,37 @@
 import React from "react";
 import "./Form.css";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const Form = () => {
+  const notify = () => toast.success("Mensaje enviado");
+  const notifyError = () => toast.error("Error al enviar el mensaje");
+
+  const sendMessage = (event) => {
+    event.preventDefault();
+    emailjs
+      .sendForm(
+        "service_xmaofjy",
+        "template_ne1r6mo",
+        event.target,
+        "aVo7deJsti1KV7Fda"
+      )
+      .then(() => {
+        //elimina todos los valores de los inputs
+        form.reset();
+        //muestra la notificación de enviado
+        notify();
+      })
+
+      .catch(() => {
+        notifyError();
+      });
+  };
+
   return (
     <div>
+      <ToastContainer />
       <div className="padre">
         <div className="contenido">
           <div className="mapa">
@@ -23,62 +51,64 @@ export const Form = () => {
                 cercana)*
               </h6>
             </div>
-            <div className="direction">
-              <div>
-                <input
-                  className="piso"
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Dirección del piso a vender"
-                />
+            <form id="form" onSubmit={sendMessage} autocomplete="off">
+              <div className="direction">
+                <div>
+                  <input
+                    className="piso"
+                    type="text"
+                    name="direction"
+                    placeholder="Dirección del piso a vender"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="datos-form">
-              <div className="datos">
-                <input
-                  className="data"
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Nombre"
-                />
+              <div className="datos-form">
+                <div className="datos">
+                  <input
+                    className="data"
+                    type="text"
+                    name="name"
+                    placeholder="Nombre*"
+                    required
+                  />
+                </div>
+                <div className="datos">
+                  <input
+                    className="data"
+                    type="text"
+                    name="last"
+                    placeholder="Apellido*"
+                    required
+                  />
+                </div>
               </div>
-              <div className="datos">
-                <input
-                  className="data"
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Apellido"
-                />
+              <div className="datos-form">
+                <div className="datos">
+                  <input
+                    className="data"
+                    type="text"
+                    name="email"
+                    placeholder="Email*"
+                    required
+                  />
+                </div>
+                <div className="datos">
+                  <input
+                    className="data"
+                    type="number"
+                    min="0"
+                    pattern="[0-9]*"
+                    name="phone"
+                    placeholder="Teléfono"
+                  />
+                </div>
               </div>
-            </div>
-            <div className="datos-form">
-              <div className="datos">
-                <input
-                  className="data"
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Email"
-                />
+              <div className="box-buttom">
+                <button className="send-buttom col-12 col-md-3 mt-3">
+                  Enviar
+                </button>
               </div>
-              <div className="datos">
-                <input
-                  className="data"
-                  type="text"
-                  name=""
-                  id=""
-                  placeholder="Telefono"
-                />
-              </div>
-            </div>
-            <div className="box-buttom">
-              <button className="send-buttom col-12 col-md-3 mt-3">
-                Enviar2
-              </button>
-            </div>
+            </form>
           </div>
         </div>
       </div>
