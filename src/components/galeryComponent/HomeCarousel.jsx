@@ -12,11 +12,18 @@ import {
 import { FlatModal } from "./FlatModal";
 import { ViewerComponent } from "./ViewerComponent";
 import "./HomeCarousel.css";
+import emailjs from "@emailjs/browser";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 export const HomeCarousel = () => {
   const { houses } = useContext(HouseContext);
   const { id } = useParams();
   const house = houses.find((p) => p._id === id);
+
+  /* ALERT */
+  const notify = () => toast.success("Mensaje enviado");
+  const notifyError = () => toast.error("Error al enviar el mensaje");
 
   /* FLAT MODAL*/
 
@@ -52,6 +59,27 @@ export const HomeCarousel = () => {
   const previousImage = () => {
     setCurrentImage(currentImage === 0 ? imageLength - 1 : currentImage - 1);
     setCount(count === 1 ? house.imgs.length : count - 1);
+  };
+
+  const sendEmail = (event) => {
+    event.preventDefault();
+    emailjs
+      .sendForm(
+        "service_xmaofjy",
+        "template_pezrll4",
+        event.target,
+        "aVo7deJsti1KV7Fda"
+      )
+      .then(() => {
+        //elimina todos los valores de los inputs
+        form.reset();
+        //muestra la notificación de enviado
+        notify();
+      })
+
+      .catch(() => {
+        notifyError();
+      });
   };
 
   /* FUNCIONES PARA DETECTAR LA EJECUCIÓN DE TECLAS FLECHA EN LA VENTANA */
@@ -341,41 +369,55 @@ export const HomeCarousel = () => {
               <div className="position-sticky" style={{ top: "2rem" }}>
                 <div className="p-4 mb-3 bg-light rounded">
                   <h4 className="fst-italic">Contactanos</h4>
-                  <form>
+                  <form id="form" onSubmit={sendEmail} autocomplete="off">
                     <input
                       className="contact-home"
                       type="text"
                       placeholder="Nombre*"
+                      name="name"
+                      autocomplete="off"
+                      required
                     />
                     <input
                       className="contact-home"
                       type="text"
                       placeholder="Apellido*"
+                      name="last"
+                      autocomplete="off"
+                      required
                     />
                     <input
                       className="contact-home"
                       type="text"
                       placeholder="Email*"
+                      name="email"
+                      autocomplete="off"
+                      required
                     />
                     <input
+                      style={{ appearance: "none" }}
                       className="contact-home"
-                      type="text"
+                      type="number"
+                      min="0"
+                      pattern="[0-9]*"
                       placeholder="Teléfono"
+                      name="phone"
                     />
                     <textarea
                       className="contact-area"
                       rows="10"
                       cols="50"
                       placeholder="Mensaje"
+                      name="message"
                     ></textarea>
                     <div>
-                      <button type="submit" className="btn btn-success w-100">
+                      <button id="button" className="btn btn-success w-100">
                         Enviar
                       </button>
                     </div>
                   </form>
                 </div>
-
+                <ToastContainer />
                 <div className="info-content">
                   <h6>
                     <strong>También puede contactarnos a través de:</strong>
