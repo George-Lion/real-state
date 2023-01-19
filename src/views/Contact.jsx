@@ -51,9 +51,9 @@ export const Contact = () => {
               <div className="card shadow-sm style-box">
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Obtenemos el mejor precio para tu casa con una valoración
+                    precisa y gratuita del mercado, para venderlo al mejor
+                    precio.
                   </p>
                 </div>
               </div>
@@ -62,9 +62,9 @@ export const Contact = () => {
               <div className="card shadow-sm style-box">
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Llevamos tu propiedad al siguiente nivel con una amplia
+                    difusión de la venta de tu inmueble, sin costo adicional
+                    para ti.
                   </p>
                 </div>
               </div>
@@ -74,9 +74,9 @@ export const Contact = () => {
               <div className="card shadow-sm style-box">
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Nuestro equipo cuenta con fotógrafos profesionales que
+                    crearán tanto el reportaje fotográfico como un video
+                    interactivo.{" "}
                   </p>
                 </div>
               </div>
@@ -85,9 +85,8 @@ export const Contact = () => {
               <div className="card shadow-sm style-box">
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Servicio personalizado con nuestros agentes inmobiliarios
+                    altamente capacitados y con experiencia en el sector.
                   </p>
                 </div>
               </div>
@@ -96,9 +95,9 @@ export const Contact = () => {
               <div className="card shadow-sm style-box">
                 <div className="card-body">
                   <p className="card-text">
-                    This is a wider card with supporting text below as a natural
-                    lead-in to additional content. This content is a little bit
-                    longer.
+                    Para ayudarte a encontrar compradores potenciales para tu
+                    casa, constantemente estamos desarrollando estrategias de
+                    marketing digital.
                   </p>
                 </div>
               </div>
@@ -115,6 +114,7 @@ export const Contact = () => {
             <img
               src="https://img.freepik.com/free-photo/hand-presenting-model-house-home-loan-campaign_53876-104970.jpg?w=2000"
               className="d-block mx-lg-auto img-fluid"
+              style={{ borderRadius: "10px 80px 10px 80px" }}
               alt="Bootstrap Themes"
               width="700"
               height="500"
@@ -122,14 +122,14 @@ export const Contact = () => {
             />
           </div>
           <div className="col-lg-6">
-            <h1 className="display-5 fw-bold lh-1 mb-3">
-              Responsive left-aligned hero with image
-            </h1>
-            <p className="lead">
-              Quickly design and customize responsive mobile-first sites with
-              Bootstrap, the world’s most popular front-end open source toolkit,
-              featuring Sass variables and mixins, responsive grid system,
-              extensive prebuilt components, and powerful JavaScript plugins.
+            <h3 className="display-5 fw-bold lh-1 mb-3">
+              ¡Solo necesitamos tu confianza!
+            </h3>
+            <p className="lead" style={{ textAlign: "justify" }}>
+              Confiar en un equipo no es fácil, por eso te ofrecemos vender tú
+              inmueble y no pagarás por ello hasta que se venda, nuestro
+              compromiso es lograrlo y conseguir el mejor precio de venta para
+              ti.
             </p>
           </div>
         </div>

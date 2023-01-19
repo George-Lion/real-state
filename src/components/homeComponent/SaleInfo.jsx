@@ -25,8 +25,8 @@ export const SaleInfo = () => {
 
                 <div className="mt-3">
                   <p className="card-text">
-                    Contamos con una gran variedad de inmuebles en las mejores
-                    zonas de España.
+                    Contamos con una gran variedad de inmuebles para comprar en
+                    las mejores zonas de España.
                   </p>
                   <div className="d-flex justify-content-between align-items-center">
                     <div className="btn-group"></div>
@@ -58,7 +58,7 @@ export const SaleInfo = () => {
                     <div className="btn-group"></div>
                   </div>
                 </div>
-                <Link className="button-selector col-md-5" to="">
+                <Link className="button-selector col-md-5" to="/services">
                   <button className="button-sty col-md-5">Servicios</button>
                 </Link>
               </div>
@@ -78,14 +78,14 @@ export const SaleInfo = () => {
 
                 <div className="mt-3">
                   <p className="card-text">
-                    Una buena vista con un café por la mañana no tiene precio.
-                    Estas son las mejores vistas del mes.
+                    Ya tenemos tu vivienda de alquiler con las mejores
+                    condiciones.
                   </p>
                   <div className="d-flex justify-content-between align-items-center">
                     <div className="btn-group"></div>
                   </div>
                 </div>
-                <Link className="button-selector col-md-5" to="/sale">
+                <Link className="button-selector col-md-5" to="/rental">
                   <button className="button-sty col-md-5">Info</button>
                 </Link>
               </div>
