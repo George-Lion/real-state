@@ -78,8 +78,8 @@ export const SaleInfo = () => {
 
                 <div className="mt-3">
                   <p className="card-text">
-                    Ya tenemos tu vivienda de alquiler con las mejores
-                    condiciones.
+                    Ya tenemos tu vivienda de alquiler con las mejores vistas y
+                    zonas comunes.
                   </p>
                   <div className="d-flex justify-content-between align-items-center">
                     <div className="btn-group"></div>

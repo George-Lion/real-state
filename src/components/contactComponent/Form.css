@@ -86,10 +86,18 @@
 .send-buttom{
   border-radius: 10px;
   border: none;
+  font-weight: 600;
   padding: 5px 10px 5px 10px;
   cursor: pointer;
-
+  background-color: rgb(55, 139, 218);
+  color: white;
 }
+
+.send-buttom:hover{
+  
+  background-color: rgb(54, 123, 187);
+}
+
 
 
 @media only screen and (max-width: 980px) {
